@@ -1,0 +1,1562 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \no\malmanger\mjqm\PageElement</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+<li><a href="../namespaces/no.html"><i class="icon-th"></i> no</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">20</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: Descendants of this class must use `chain_` prefix for all
+methods they wish to make chainable."><span class="description">Descendants of this class must use `chain_` prefix for all
+methods they wish to make chainable.</span><pre>__call()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: Create the page object"><span class="description">Create the page object</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___get" title="__get :: Used to overload get Property"><span class="description">Used to overload get Property</span><pre>__get()</pre></a></li>
+<li class="method public inherited"><a href="#method___isset" title="__isset :: Used to overload isset for selected Property"><span class="description">Used to overload isset for selected Property</span><pre>__isset()</pre></a></li>
+<li class="method public inherited"><a href="#method___set" title="__set :: Used to overload set Property"><span class="description">Used to overload set Property</span><pre>__set()</pre></a></li>
+<li class="method public inherited"><a href="#method___unset" title="__unset :: Unset the selected Property"><span class="description">Unset the selected Property</span><pre>__unset()</pre></a></li>
+<li class="method public inherited"><a href="#method_addClass" title="addClass :: add class to element"><span class="description">add class to element</span><pre>addClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_addContent" title="addContent :: Add content to element"><span class="description">Add content to element</span><pre>addContent()</pre></a></li>
+<li class="method public inherited"><a href="#method_attributes" title="attributes :: Get a string of attribute=value pairs"><span class="description">Get a string of attribute=value pairs</span><pre>attributes()</pre></a></li>
+<li class="method public inherited"><a href="#method_chain_classes" title="chain_classes :: Chainable version of adding classes."><span class="description">Chainable version of adding classes.</span><pre>chain_classes()</pre></a></li>
+<li class="method public inherited"><a href="#method_chain_content" title="chain_content :: Chainable version of setting content."><span class="description">Chainable version of setting content.</span><pre>chain_content()</pre></a></li>
+<li class="method public inherited"><a href="#method_chain_data_role" title="chain_data_role :: chainable version of setDataRole()"><span class="description">chainable version of setDataRole()</span><pre>chain_data_role()</pre></a></li>
+<li class="method public inherited"><a href="#method_chain_data_theme" title="chain_data_theme :: chainable version of setDataTheme()"><span class="description">chainable version of setDataTheme()</span><pre>chain_data_theme()</pre></a></li>
+<li class="method public inherited"><a href="#method_chain_id" title="chain_id :: Chainable version of setting id."><span class="description">Chainable version of setting id.</span><pre>chain_id()</pre></a></li>
+<li class="method public inherited"><a href="#method_customAttributes" title="customAttributes :: Get the custom attributes defined"><span class="description">Get the custom attributes defined</span><pre>customAttributes()</pre></a></li>
+<li class="method public inherited"><a href="#method_deleteClass" title="deleteClass :: remove class from element"><span class="description">remove class from element</span><pre>deleteClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_element" title="element :: Get the complete element tag."><span class="description">Get the complete element tag.</span><pre>element()</pre></a></li>
+<li class="method public inherited"><a href="#method_getClass" title="getClass :: get classes for element"><span class="description">get classes for element</span><pre>getClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_getCloseElement" title="getCloseElement :: Get the the closing html for the tag"><span class="description">Get the the closing html for the tag</span><pre>getCloseElement()</pre></a></li>
+<li class="method public inherited"><a href="#method_getContent" title="getContent :: Get text content for the element"><span class="description">Get text content for the element</span><pre>getContent()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataDirection" title="getDataDirection :: Get the data-direction of the jqm element"><span class="description">Get the data-direction of the jqm element</span><pre>getDataDirection()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataIcon" title="getDataIcon :: Get the data-icon of the jqm element"><span class="description">Get the data-icon of the jqm element</span><pre>getDataIcon()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataInset" title="getDataInset :: Get the data-inset of the jqm element"><span class="description">Get the data-inset of the jqm element</span><pre>getDataInset()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataRole" title="getDataRole :: Get the data-role of the jqm element"><span class="description">Get the data-role of the jqm element</span><pre>getDataRole()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataTheme" title="getDataTheme :: Get the data-theme of the jqm element"><span class="description">Get the data-theme of the jqm element</span><pre>getDataTheme()</pre></a></li>
+<li class="method public inherited"><a href="#method_getDataTransition" title="getDataTransition :: Get the data-transition of the jqm element"><span class="description">Get the data-transition of the jqm element</span><pre>getDataTransition()</pre></a></li>
+<li class="method public inherited"><a href="#method_getOpenElement" title="getOpenElement :: Get the start of the element including attributes"><span class="description">Get the start of the element including attributes</span><pre>getOpenElement()</pre></a></li>
+<li class="method public inherited"><a href="#method_renderContent" title="renderContent :: Make a html representation for the content array"><span class="description">Make a html representation for the content array</span><pre>renderContent()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDataDirection" title="setDataDirection :: direction
+Set the jqm data-direction"><span class="description">direction
+Set the jqm data-direction</span><pre>setDataDirection()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDataIcon" title="setDataIcon :: Set the jqm data-icon"><span class="description">Set the jqm data-icon</span><pre>setDataIcon()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDataInset" title="setDataInset :: inset
+Set the jqm data-inset"><span class="description">inset
+Set the jqm data-inset</span><pre>setDataInset()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDataRole" title="setDataRole :: Set the jqm data-role"><span class="description">Set the jqm data-role</span><pre>setDataRole()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDataTheme" title="setDataTheme :: Set the jqm data-theme"><span class="description">Set the jqm data-theme</span><pre>setDataTheme()</pre></a></li>
+<li class="method public inherited"><a href="#method_setDataTransition" title="setDataTransition :: transition
+Set the jqm data-transition"><span class="description">transition
+Set the jqm data-transition</span><pre>setDataTransition()</pre></a></li>
+<li class="method public inherited"><a href="#method_setId" title="setId :: Set the ID attribute of the element"><span class="description">Set the ID attribute of the element</span><pre>setId()</pre></a></li>
+<li class="method public inherited"><a href="#method_unaddContent" title="unaddContent :: Remove the content from the element"><span class="description">Remove the content from the element</span><pre>unaddContent()</pre></a></li>
+<li class="method public inherited"><a href="#method_unsetClass" title="unsetClass :: clear list of classes for element"><span class="description">clear list of classes for element</span><pre>unsetClass()</pre></a></li>
+<li class="method public inherited"><a href="#method_unsetId" title="unsetId :: Remove the ID from the element"><span class="description">Remove the ID from the element</span><pre>unsetId()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property__classes" title="$_classes :: array of classes."><span class="description"></span><pre>$_classes</pre></a></li>
+<li class="property protected inherited"><a href="#property__content" title="$_content :: element content"><span class="description"></span><pre>$_content</pre></a></li>
+<li class="property protected inherited"><a href="#property__customAttributes" title="$_customAttributes :: array of custom 'overloaded' attributes."><span class="description"></span><pre>$_customAttributes</pre></a></li>
+<li class="property protected inherited"><a href="#property__data_direction" title="$_data_direction :: "><span class="description"></span><pre>$_data_direction</pre></a></li>
+<li class="property protected inherited"><a href="#property__data_icon" title="$_data_icon :: "><span class="description"></span><pre>$_data_icon</pre></a></li>
+<li class="property protected inherited"><a href="#property__data_inset" title="$_data_inset :: "><span class="description"></span><pre>$_data_inset</pre></a></li>
+<li class="property protected inherited"><a href="#property__data_role" title="$_data_role :: "><span class="description"></span><pre>$_data_role</pre></a></li>
+<li class="property protected inherited"><a href="#property__data_theme" title="$_data_theme :: "><span class="description"></span><pre>$_data_theme</pre></a></li>
+<li class="property protected inherited"><a href="#property__data_transition" title="$_data_transition :: "><span class="description"></span><pre>$_data_transition</pre></a></li>
+<li class="property protected inherited"><a href="#property__element_name" title="$_element_name :: string containing the name of the element"><span class="description"></span><pre>$_element_name</pre></a></li>
+<li class="property protected inherited"><a href="#property__id" title="$_id :: element id"><span class="description"></span><pre>$_id</pre></a></li>
+<li class="property protected inherited"><a href="#property__title" title="$_title :: element title"><span class="description"></span><pre>$_title</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  inherited"><a href="#constant_DEFAULT_DIRECTION" title="DEFAULT_DIRECTION :: "><span class="description">DEFAULT_DIRECTION</span><pre>DEFAULT_DIRECTION</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DEFAULT_ICON" title="DEFAULT_ICON :: "><span class="description">DEFAULT_ICON</span><pre>DEFAULT_ICON</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DEFAULT_INSET" title="DEFAULT_INSET :: "><span class="description">DEFAULT_INSET</span><pre>DEFAULT_INSET</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DEFAULT_ROLE" title="DEFAULT_ROLE :: Defaults"><span class="description">Defaults</span><pre>DEFAULT_ROLE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DEFAULT_THEME" title="DEFAULT_THEME :: "><span class="description">DEFAULT_THEME</span><pre>DEFAULT_THEME</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DEFAULT_TRANSITION" title="DEFAULT_TRANSITION :: "><span class="description">DEFAULT_TRANSITION</span><pre>DEFAULT_TRANSITION</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DI_FALSE" title="DI_FALSE :: "><span class="description">DI_FALSE</span><pre>DI_FALSE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DI_TRUE" title="DI_TRUE :: constants for data-inset true or false"><span class="description">constants for data-inset true or false</span><pre>DI_TRUE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_BUTTON" title="DR_BUTTON :: "><span class="description">DR_BUTTON</span><pre>DR_BUTTON</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_COLLAPSIBLE" title="DR_COLLAPSIBLE :: "><span class="description">DR_COLLAPSIBLE</span><pre>DR_COLLAPSIBLE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_COLLAPSIBLE_SET" title="DR_COLLAPSIBLE_SET :: "><span class="description">DR_COLLAPSIBLE_SET</span><pre>DR_COLLAPSIBLE_SET</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_CONTENT" title="DR_CONTENT :: "><span class="description">DR_CONTENT</span><pre>DR_CONTENT</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_CONTROLGROUP" title="DR_CONTROLGROUP :: "><span class="description">DR_CONTROLGROUP</span><pre>DR_CONTROLGROUP</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_FIELDCONTAIN" title="DR_FIELDCONTAIN :: "><span class="description">DR_FIELDCONTAIN</span><pre>DR_FIELDCONTAIN</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_FOOTER" title="DR_FOOTER :: "><span class="description">DR_FOOTER</span><pre>DR_FOOTER</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_HEADER" title="DR_HEADER :: "><span class="description">DR_HEADER</span><pre>DR_HEADER</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_LISTVIEW" title="DR_LISTVIEW :: "><span class="description">DR_LISTVIEW</span><pre>DR_LISTVIEW</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_LIST_DIVIDER" title="DR_LIST_DIVIDER :: "><span class="description">DR_LIST_DIVIDER</span><pre>DR_LIST_DIVIDER</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_NAVBAR" title="DR_NAVBAR :: "><span class="description">DR_NAVBAR</span><pre>DR_NAVBAR</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_NONE" title="DR_NONE :: "><span class="description">DR_NONE</span><pre>DR_NONE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_PAGE" title="DR_PAGE :: constants for data-role"><span class="description">constants for data-role</span><pre>DR_PAGE</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DR_SLIDER" title="DR_SLIDER :: "><span class="description">DR_SLIDER</span><pre>DR_SLIDER</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DT_A" title="DT_A :: Constants for data-theme a."><span class="description">Constants for data-theme a.</span><pre>DT_A</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DT_B" title="DT_B :: "><span class="description">DT_B</span><pre>DT_B</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DT_C" title="DT_C :: "><span class="description">DT_C</span><pre>DT_C</pre></a></li>
+<li class="constant  inherited"><a href="#constant_DT_D" title="DT_D :: "><span class="description">DT_D</span><pre>DT_D</pre></a></li>
+<li class="constant  inherited"><a href="#constant_ELEMENT_CLOSED" title="ELEMENT_CLOSED :: "><span class="description">ELEMENT_CLOSED</span><pre>ELEMENT_CLOSED</pre></a></li>
+<li class="constant  inherited"><a href="#constant_ELEMENT_CONTENT" title="ELEMENT_CONTENT :: "><span class="description">ELEMENT_CONTENT</span><pre>ELEMENT_CONTENT</pre></a></li>
+<li class="constant  inherited"><a href="#constant_ELEMENT_EMPTY" title="ELEMENT_EMPTY :: "><span class="description">ELEMENT_EMPTY</span><pre>ELEMENT_EMPTY</pre></a></li>
+<li class="constant  inherited"><a href="#constant_ELEMENT_END" title="ELEMENT_END :: "><span class="description">ELEMENT_END</span><pre>ELEMENT_END</pre></a></li>
+<li class="constant  inherited"><a href="#constant_ELEMENT_START" title="ELEMENT_START :: "><span class="description">ELEMENT_START</span><pre>ELEMENT_START</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\no\malmanger\mjqm\PageElement"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/no.html">no</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/no.malmanger.html">malmanger</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/no.malmanger.mjqm.html">mjqm</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/no.malmanger.mjqm.PageElement.html">PageElement</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Page class handles support for jquery-mobile page elements.</p>
+<div class="details">
+<div class="long_description"></div>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>Descendants of this class must use `chain_` prefix for all
+methods they wish to make chainable.</h2>
+<pre>__call(string $name, array $arguments) : \no\malmanger\mjqm\PlainChain</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The method can then be
+called by its base name.</p>
+
+<p>Return values from called methods are lost.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Chain::__call()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::__call()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::__call()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>name of the method called</p></div>
+<div class="subelement argument">
+<h4>$arguments</h4>
+<code>array</code><p>array of arguments supplied to method</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\no\malmanger\mjqm\PlainChain</code>$this instance of this class</div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Create the page object</h2>
+<pre>__construct(string $id, string $data_theme) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>= '' set the id attribute of the page element</p>
+</div>
+<div class="subelement argument">
+<h4>$data_theme</h4>
+<code>string</code><p>= self::DEFAULT_THEME sets which theme-roller theme to use</p>
+</div>
+</div></div>
+</div>
+<a id="method___get"></a><div class="element clickable method public method___get" data-toggle="collapse" data-target=".method___get .collapse">
+<h2>Used to overload get Property</h2>
+<pre>__get(string $name) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::__get()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::__get()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name of property to set.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>$value for the spesified property $name.</div>
+</div></div>
+</div>
+<a id="method___isset"></a><div class="element clickable method public method___isset" data-toggle="collapse" data-target=".method___isset .collapse">
+<h2>Used to overload isset for selected Property</h2>
+<pre>__isset(string $name) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::__isset()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name of property to check for.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>$isset true if propertyfor the spesified property $name.</div>
+</div></div>
+</div>
+<a id="method___set"></a><div class="element clickable method public method___set" data-toggle="collapse" data-target=".method___set .collapse">
+<h2>Used to overload set Property</h2>
+<pre>__set(string $name, mixed $value) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::__set()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::__set()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name of property to set.</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The value to give the property</p></div>
+</div></div>
+</div>
+<a id="method___unset"></a><div class="element clickable method public method___unset" data-toggle="collapse" data-target=".method___unset .collapse">
+<h2>Unset the selected Property</h2>
+<pre>__unset(string $name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::__unset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::__unset()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name of property to set.</p></div>
+</div></div>
+</div>
+<a id="method_addClass"></a><div class="element clickable method public method_addClass" data-toggle="collapse" data-target=".method_addClass .collapse">
+<h2>add class to element</h2>
+<pre>addClass(string $classnames) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::addClass()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::addClass()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classnames</h4>
+<code>string</code><p>class('s) to add. Use space ' ' separated list of classnames</p>
+</div>
+</div></div>
+</div>
+<a id="method_addContent"></a><div class="element clickable method public method_addContent" data-toggle="collapse" data-target=".method_addContent .collapse">
+<h2>Add content to element</h2>
+<pre>addContent(string | array | <a href="../classes/no.malmanger.mjqm.Element.html">\no\malmanger\mjqm\Element</a> $content) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::addContent()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::addContent()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code><code>array</code><code><a href="../classes/no.malmanger.mjqm.Element.html">\no\malmanger\mjqm\Element</a></code><p>the content to add.
+string is handled as pure text (html for output)
+Element is rendered with the element() method
+array's can contain string, Element og even more arrays</p>
+</div>
+</div></div>
+</div>
+<a id="method_attributes"></a><div class="element clickable method public method_attributes" data-toggle="collapse" data-target=".method_attributes .collapse">
+<h2>Get a string of attribute=value pairs</h2>
+<pre>attributes() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::attributes()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$attributes String containing the attributes.</div>
+</div></div>
+</div>
+<a id="method_chain_classes"></a><div class="element clickable method public method_chain_classes" data-toggle="collapse" data-target=".method_chain_classes .collapse">
+<h2>Chainable version of adding classes.</h2>
+<pre>chain_classes(string | boolean $classnames) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::chain_classes()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::chain_classes()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classnames</h4>
+<code>string</code><code>boolean</code><p>The classes to add to element. False value (default) clears classes.</p>
+</div>
+</div></div>
+</div>
+<a id="method_chain_content"></a><div class="element clickable method public method_chain_content" data-toggle="collapse" data-target=".method_chain_content .collapse">
+<h2>Chainable version of setting content.</h2>
+<pre>chain_content(string $content) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::chain_content()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::chain_content()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code><p>The content to add to element.</p></div>
+</div></div>
+</div>
+<a id="method_chain_data_role"></a><div class="element clickable method public method_chain_data_role" data-toggle="collapse" data-target=".method_chain_data_role .collapse">
+<h2>chainable version of setDataRole()</h2>
+<pre>chain_data_role(string $data_role) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::chain_data_role()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data_role</h4>
+<code>string</code><p>= DEFAULT_ROLE</p>
+</div>
+</div></div>
+</div>
+<a id="method_chain_data_theme"></a><div class="element clickable method public method_chain_data_theme" data-toggle="collapse" data-target=".method_chain_data_theme .collapse">
+<h2>chainable version of setDataTheme()</h2>
+<pre>chain_data_theme($data_theme) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::chain_data_theme()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data_theme</h4></div>
+</div></div>
+</div>
+<a id="method_chain_id"></a><div class="element clickable method public method_chain_id" data-toggle="collapse" data-target=".method_chain_id .collapse">
+<h2>Chainable version of setting id.</h2>
+<pre>chain_id(string $id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::chain_id()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::chain_id()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>The id to set for element. Empty string removes id.</p></div>
+</div></div>
+</div>
+<a id="method_customAttributes"></a><div class="element clickable method public method_customAttributes" data-toggle="collapse" data-target=".method_customAttributes .collapse">
+<h2>Get the custom attributes defined</h2>
+<pre>customAttributes() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::customAttributes()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::customAttributes()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of $name -> $value pairs</div>
+</div></div>
+</div>
+<a id="method_deleteClass"></a><div class="element clickable method public method_deleteClass" data-toggle="collapse" data-target=".method_deleteClass .collapse">
+<h2>remove class from element</h2>
+<pre>deleteClass(string $classnames) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::deleteClass()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::deleteClass()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classnames</h4>
+<code>string</code><p>class('s) to remove. Use space ' ' separated list of classnames</p>
+</div>
+</div></div>
+</div>
+<a id="method_element"></a><div class="element clickable method public method_element" data-toggle="collapse" data-target=".method_element .collapse">
+<h2>Get the complete element tag.</h2>
+<pre>element(int $complete) : \no\malmanger\mjqm\the</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::element()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::element()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$complete</h4>
+<code>int</code><p>=  self::ELEMETN_CONTENT is a complete element with
+The four alternatives for $complete is:</p>
+
+<pre><code>
+A: CLOSED_ELEMENT
+&lt;element attr="xx yy" /&gt;
+B: START_ELEMENT
+&lt;element attr="xx yy"&gt;
+C: EMPTY_ELEMENT
+&lt;element attr="xx yy"&gt;&lt;/element&gt;
+D: CONTENT_ELEMENT
+&lt;element attr="xx yy"&gt;
+   sss sss sss sss ldldldldl
+   kdl ølsdk ølskdøl sd ølsdkølsk
+aølskd ksa øasøl døla
+&lt;/element&gt;</code></pre>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\no\malmanger\mjqm\the</code>complete tag</div>
+</div></div>
+</div>
+<a id="method_getClass"></a><div class="element clickable method public method_getClass" data-toggle="collapse" data-target=".method_getClass .collapse">
+<h2>get classes for element</h2>
+<pre>getClass(boolean $return_array) : string | array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::getClass()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getClass()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$return_array</h4>
+<code>boolean</code><p>If classes should be returned as an array instead og a space separated string.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>array</code>$classnames class('s) to add. Use space ' ' separated list of classnames</div>
+</div></div>
+</div>
+<a id="method_getCloseElement"></a><div class="element clickable method public method_getCloseElement" data-toggle="collapse" data-target=".method_getCloseElement .collapse">
+<h2>Get the the closing html for the tag</h2>
+<pre>getCloseElement() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::getCloseElement()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getCloseElement()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>'</element>'</div>
+</div></div>
+</div>
+<a id="method_getContent"></a><div class="element clickable method public method_getContent" data-toggle="collapse" data-target=".method_getContent .collapse">
+<h2>Get text content for the element</h2>
+<pre>getContent() : \no\malmanger\mjqm\array($content)</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::getContent()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getContent()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\no\malmanger\mjqm\array($content)</code></div>
+</div></div>
+</div>
+<a id="method_getDataDirection"></a><div class="element clickable method public method_getDataDirection" data-toggle="collapse" data-target=".method_getDataDirection .collapse">
+<h2>Get the data-direction of the jqm element</h2>
+<pre>getDataDirection() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getDataDirection()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$data_direction Returns the jqm datadirection.</div>
+</div></div>
+</div>
+<a id="method_getDataIcon"></a><div class="element clickable method public method_getDataIcon" data-toggle="collapse" data-target=".method_getDataIcon .collapse">
+<h2>Get the data-icon of the jqm element</h2>
+<pre>getDataIcon() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getDataIcon()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$data_icon Returns the jqm dataicon.</div>
+</div></div>
+</div>
+<a id="method_getDataInset"></a><div class="element clickable method public method_getDataInset" data-toggle="collapse" data-target=".method_getDataInset .collapse">
+<h2>Get the data-inset of the jqm element</h2>
+<pre>getDataInset() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getDataInset()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$data_inset Returns the jqm datainset.</div>
+</div></div>
+</div>
+<a id="method_getDataRole"></a><div class="element clickable method public method_getDataRole" data-toggle="collapse" data-target=".method_getDataRole .collapse">
+<h2>Get the data-role of the jqm element</h2>
+<pre>getDataRole() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getDataRole()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$data_role Returns the jqm datarole.</div>
+</div></div>
+</div>
+<a id="method_getDataTheme"></a><div class="element clickable method public method_getDataTheme" data-toggle="collapse" data-target=".method_getDataTheme .collapse">
+<h2>Get the data-theme of the jqm element</h2>
+<pre>getDataTheme() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getDataTheme()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$data_theme Returns the jqm datarole.</div>
+</div></div>
+</div>
+<a id="method_getDataTransition"></a><div class="element clickable method public method_getDataTransition" data-toggle="collapse" data-target=".method_getDataTransition .collapse">
+<h2>Get the data-transition of the jqm element</h2>
+<pre>getDataTransition() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getDataTransition()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$data_transition Returns the jqm datatransition.</div>
+</div></div>
+</div>
+<a id="method_getOpenElement"></a><div class="element clickable method public method_getOpenElement" data-toggle="collapse" data-target=".method_getOpenElement .collapse">
+<h2>Get the start of the element including attributes</h2>
+<pre>getOpenElement(boolean $closed) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::getOpenElement()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::getOpenElement()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$closed</h4>
+<code>boolean</code><p>= false If returned element should be closed immediately with ' />'</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$openelement the starting '<element attribute="xx" ... >'</div>
+</div></div>
+</div>
+<a id="method_renderContent"></a><div class="element clickable method public method_renderContent" data-toggle="collapse" data-target=".method_renderContent .collapse">
+<h2>Make a html representation for the content array</h2>
+<pre>renderContent(array $contentList) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::renderContent()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::renderContent()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentList</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$html</div>
+</div></div>
+</div>
+<a id="method_setDataDirection"></a><div class="element clickable method public method_setDataDirection" data-toggle="collapse" data-target=".method_setDataDirection .collapse">
+<h2>direction
+Set the jqm data-direction</h2>
+<pre>setDataDirection(string $data_direction) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setDataDirection()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data_direction</h4>
+<code>string</code><p>The datadirection of the jqm element</p></div>
+</div></div>
+</div>
+<a id="method_setDataIcon"></a><div class="element clickable method public method_setDataIcon" data-toggle="collapse" data-target=".method_setDataIcon .collapse">
+<h2>Set the jqm data-icon</h2>
+<pre>setDataIcon(string $data_icon) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setDataIcon()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data_icon</h4>
+<code>string</code><p>The dataicon of the jqm element</p></div>
+</div></div>
+</div>
+<a id="method_setDataInset"></a><div class="element clickable method public method_setDataInset" data-toggle="collapse" data-target=".method_setDataInset .collapse">
+<h2>inset
+Set the jqm data-inset</h2>
+<pre>setDataInset($data_inset) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setDataInset()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data_inset</h4></div>
+</div></div>
+</div>
+<a id="method_setDataRole"></a><div class="element clickable method public method_setDataRole" data-toggle="collapse" data-target=".method_setDataRole .collapse">
+<h2>Set the jqm data-role</h2>
+<pre>setDataRole($data_role) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setDataRole()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data_role</h4></div>
+</div></div>
+</div>
+<a id="method_setDataTheme"></a><div class="element clickable method public method_setDataTheme" data-toggle="collapse" data-target=".method_setDataTheme .collapse">
+<h2>Set the jqm data-theme</h2>
+<pre>setDataTheme(string $data_theme) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setDataTheme()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data_theme</h4>
+<code>string</code><p>The datarole of the jqm element</p></div>
+</div></div>
+</div>
+<a id="method_setDataTransition"></a><div class="element clickable method public method_setDataTransition" data-toggle="collapse" data-target=".method_setDataTransition .collapse">
+<h2>transition
+Set the jqm data-transition</h2>
+<pre>setDataTransition(string $data_transition) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setDataTransition()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data_transition</h4>
+<code>string</code><p>The datatransition of the jqm element</p></div>
+</div></div>
+</div>
+<a id="method_setId"></a><div class="element clickable method public method_setId" data-toggle="collapse" data-target=".method_setId .collapse">
+<h2>Set the ID attribute of the element</h2>
+<pre>setId(string $id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::setId()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::setId()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>the ID to set</p></div>
+</div></div>
+</div>
+<a id="method_unaddContent"></a><div class="element clickable method public method_unaddContent" data-toggle="collapse" data-target=".method_unaddContent .collapse">
+<h2>Remove the content from the element</h2>
+<pre>unaddContent() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::unaddContent()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::unaddContent()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_unsetClass"></a><div class="element clickable method public method_unsetClass" data-toggle="collapse" data-target=".method_unsetClass .collapse">
+<h2>clear list of classes for element</h2>
+<pre>unsetClass() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::unsetClass()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::unsetClass()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_unsetId"></a><div class="element clickable method public method_unsetId" data-toggle="collapse" data-target=".method_unsetId .collapse">
+<h2>Remove the ID from the element</h2>
+<pre>unsetId() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::unsetId()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::unsetId()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__classes"> </a><div class="element clickable property protected property__classes" data-toggle="collapse" data-target=".property__classes .collapse">
+<h2></h2>
+<pre>$_classes </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::$$_classes</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_classes</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__content"> </a><div class="element clickable property protected property__content" data-toggle="collapse" data-target=".property__content .collapse">
+<h2></h2>
+<pre>$_content </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::$$_content</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_content</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__customAttributes"> </a><div class="element clickable property protected property__customAttributes" data-toggle="collapse" data-target=".property__customAttributes .collapse">
+<h2></h2>
+<pre>$_customAttributes </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::$$_customAttributes</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_customAttributes</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__data_direction"> </a><div class="element clickable property protected property__data_direction" data-toggle="collapse" data-target=".property__data_direction .collapse">
+<h2></h2>
+<pre>$_data_direction </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_data_direction</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__data_icon"> </a><div class="element clickable property protected property__data_icon" data-toggle="collapse" data-target=".property__data_icon .collapse">
+<h2></h2>
+<pre>$_data_icon </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_data_icon</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__data_inset"> </a><div class="element clickable property protected property__data_inset" data-toggle="collapse" data-target=".property__data_inset .collapse">
+<h2></h2>
+<pre>$_data_inset </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_data_inset</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__data_role"> </a><div class="element clickable property protected property__data_role" data-toggle="collapse" data-target=".property__data_role .collapse">
+<h2></h2>
+<pre>$_data_role </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_data_role</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__data_theme"> </a><div class="element clickable property protected property__data_theme" data-toggle="collapse" data-target=".property__data_theme .collapse">
+<h2></h2>
+<pre>$_data_theme </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_data_theme</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__data_transition"> </a><div class="element clickable property protected property__data_transition" data-toggle="collapse" data-target=".property__data_transition .collapse">
+<h2></h2>
+<pre>$_data_transition </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_data_transition</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__element_name"> </a><div class="element clickable property protected property__element_name" data-toggle="collapse" data-target=".property__element_name .collapse">
+<h2></h2>
+<pre>$_element_name </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::$$_element_name</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_element_name</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__id"> </a><div class="element clickable property protected property__id" data-toggle="collapse" data-target=".property__id .collapse">
+<h2></h2>
+<pre>$_id </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::$$_id</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_id</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__title"> </a><div class="element clickable property protected property__title" data-toggle="collapse" data-target=".property__title .collapse">
+<h2></h2>
+<pre>$_title </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::$$_title</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::$$_title</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_DEFAULT_DIRECTION"> </a><div class="element clickable constant  constant_DEFAULT_DIRECTION" data-toggle="collapse" data-target=".constant_DEFAULT_DIRECTION .collapse">
+<h2>DEFAULT_DIRECTION</h2>
+<pre>DEFAULT_DIRECTION </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DEFAULT_DIRECTION</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DEFAULT_ICON"> </a><div class="element clickable constant  constant_DEFAULT_ICON" data-toggle="collapse" data-target=".constant_DEFAULT_ICON .collapse">
+<h2>DEFAULT_ICON</h2>
+<pre>DEFAULT_ICON </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DEFAULT_ICON</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DEFAULT_INSET"> </a><div class="element clickable constant  constant_DEFAULT_INSET" data-toggle="collapse" data-target=".constant_DEFAULT_INSET .collapse">
+<h2>DEFAULT_INSET</h2>
+<pre>DEFAULT_INSET </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DEFAULT_INSET</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DEFAULT_ROLE"> </a><div class="element clickable constant  constant_DEFAULT_ROLE" data-toggle="collapse" data-target=".constant_DEFAULT_ROLE .collapse">
+<h2>Defaults</h2>
+<pre>DEFAULT_ROLE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DEFAULT_ROLE</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DEFAULT_THEME"> </a><div class="element clickable constant  constant_DEFAULT_THEME" data-toggle="collapse" data-target=".constant_DEFAULT_THEME .collapse">
+<h2>DEFAULT_THEME</h2>
+<pre>DEFAULT_THEME </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DEFAULT_THEME</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DEFAULT_TRANSITION"> </a><div class="element clickable constant  constant_DEFAULT_TRANSITION" data-toggle="collapse" data-target=".constant_DEFAULT_TRANSITION .collapse">
+<h2>DEFAULT_TRANSITION</h2>
+<pre>DEFAULT_TRANSITION </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DEFAULT_TRANSITION</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DI_FALSE"> </a><div class="element clickable constant  constant_DI_FALSE" data-toggle="collapse" data-target=".constant_DI_FALSE .collapse">
+<h2>DI_FALSE</h2>
+<pre>DI_FALSE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DI_FALSE</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DI_TRUE"> </a><div class="element clickable constant  constant_DI_TRUE" data-toggle="collapse" data-target=".constant_DI_TRUE .collapse">
+<h2>constants for data-inset true or false</h2>
+<pre>DI_TRUE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DI_TRUE</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_BUTTON"> </a><div class="element clickable constant  constant_DR_BUTTON" data-toggle="collapse" data-target=".constant_DR_BUTTON .collapse">
+<h2>DR_BUTTON</h2>
+<pre>DR_BUTTON </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_BUTTON</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_COLLAPSIBLE"> </a><div class="element clickable constant  constant_DR_COLLAPSIBLE" data-toggle="collapse" data-target=".constant_DR_COLLAPSIBLE .collapse">
+<h2>DR_COLLAPSIBLE</h2>
+<pre>DR_COLLAPSIBLE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_COLLAPSIBLE</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_COLLAPSIBLE_SET"> </a><div class="element clickable constant  constant_DR_COLLAPSIBLE_SET" data-toggle="collapse" data-target=".constant_DR_COLLAPSIBLE_SET .collapse">
+<h2>DR_COLLAPSIBLE_SET</h2>
+<pre>DR_COLLAPSIBLE_SET </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_COLLAPSIBLE_SET</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_CONTENT"> </a><div class="element clickable constant  constant_DR_CONTENT" data-toggle="collapse" data-target=".constant_DR_CONTENT .collapse">
+<h2>DR_CONTENT</h2>
+<pre>DR_CONTENT </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_CONTENT</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_CONTROLGROUP"> </a><div class="element clickable constant  constant_DR_CONTROLGROUP" data-toggle="collapse" data-target=".constant_DR_CONTROLGROUP .collapse">
+<h2>DR_CONTROLGROUP</h2>
+<pre>DR_CONTROLGROUP </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_CONTROLGROUP</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_FIELDCONTAIN"> </a><div class="element clickable constant  constant_DR_FIELDCONTAIN" data-toggle="collapse" data-target=".constant_DR_FIELDCONTAIN .collapse">
+<h2>DR_FIELDCONTAIN</h2>
+<pre>DR_FIELDCONTAIN </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_FIELDCONTAIN</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_FOOTER"> </a><div class="element clickable constant  constant_DR_FOOTER" data-toggle="collapse" data-target=".constant_DR_FOOTER .collapse">
+<h2>DR_FOOTER</h2>
+<pre>DR_FOOTER </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_FOOTER</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_HEADER"> </a><div class="element clickable constant  constant_DR_HEADER" data-toggle="collapse" data-target=".constant_DR_HEADER .collapse">
+<h2>DR_HEADER</h2>
+<pre>DR_HEADER </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_HEADER</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_LISTVIEW"> </a><div class="element clickable constant  constant_DR_LISTVIEW" data-toggle="collapse" data-target=".constant_DR_LISTVIEW .collapse">
+<h2>DR_LISTVIEW</h2>
+<pre>DR_LISTVIEW </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_LISTVIEW</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_LIST_DIVIDER"> </a><div class="element clickable constant  constant_DR_LIST_DIVIDER" data-toggle="collapse" data-target=".constant_DR_LIST_DIVIDER .collapse">
+<h2>DR_LIST_DIVIDER</h2>
+<pre>DR_LIST_DIVIDER </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_LIST_DIVIDER</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_NAVBAR"> </a><div class="element clickable constant  constant_DR_NAVBAR" data-toggle="collapse" data-target=".constant_DR_NAVBAR .collapse">
+<h2>DR_NAVBAR</h2>
+<pre>DR_NAVBAR </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_NAVBAR</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_NONE"> </a><div class="element clickable constant  constant_DR_NONE" data-toggle="collapse" data-target=".constant_DR_NONE .collapse">
+<h2>DR_NONE</h2>
+<pre>DR_NONE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_NONE</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_PAGE"> </a><div class="element clickable constant  constant_DR_PAGE" data-toggle="collapse" data-target=".constant_DR_PAGE .collapse">
+<h2>constants for data-role</h2>
+<pre>DR_PAGE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_PAGE</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DR_SLIDER"> </a><div class="element clickable constant  constant_DR_SLIDER" data-toggle="collapse" data-target=".constant_DR_SLIDER .collapse">
+<h2>DR_SLIDER</h2>
+<pre>DR_SLIDER </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DR_SLIDER</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DT_A"> </a><div class="element clickable constant  constant_DT_A" data-toggle="collapse" data-target=".constant_DT_A .collapse">
+<h2>Constants for data-theme a.</h2>
+<pre>DT_A </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>.d</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DT_A</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DT_B"> </a><div class="element clickable constant  constant_DT_B" data-toggle="collapse" data-target=".constant_DT_B .collapse">
+<h2>DT_B</h2>
+<pre>DT_B </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DT_B</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DT_C"> </a><div class="element clickable constant  constant_DT_C" data-toggle="collapse" data-target=".constant_DT_C .collapse">
+<h2>DT_C</h2>
+<pre>DT_C </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DT_C</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_DT_D"> </a><div class="element clickable constant  constant_DT_D" data-toggle="collapse" data-target=".constant_DT_D .collapse">
+<h2>DT_D</h2>
+<pre>DT_D </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::DT_D</td>
+</tr></table>
+</div></div>
+</div>
+<a id="constant_ELEMENT_CLOSED"> </a><div class="element clickable constant  constant_ELEMENT_CLOSED" data-toggle="collapse" data-target=".constant_ELEMENT_CLOSED .collapse">
+<h2>ELEMENT_CLOSED</h2>
+<pre>ELEMENT_CLOSED </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::ELEMENT_CLOSED</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::ELEMENT_CLOSED</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_ELEMENT_CONTENT"> </a><div class="element clickable constant  constant_ELEMENT_CONTENT" data-toggle="collapse" data-target=".constant_ELEMENT_CONTENT .collapse">
+<h2>ELEMENT_CONTENT</h2>
+<pre>ELEMENT_CONTENT </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::ELEMENT_CONTENT</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::ELEMENT_CONTENT</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_ELEMENT_EMPTY"> </a><div class="element clickable constant  constant_ELEMENT_EMPTY" data-toggle="collapse" data-target=".constant_ELEMENT_EMPTY .collapse">
+<h2>ELEMENT_EMPTY</h2>
+<pre>ELEMENT_EMPTY </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::ELEMENT_EMPTY</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::ELEMENT_EMPTY</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_ELEMENT_END"> </a><div class="element clickable constant  constant_ELEMENT_END" data-toggle="collapse" data-target=".constant_ELEMENT_END .collapse">
+<h2>ELEMENT_END</h2>
+<pre>ELEMENT_END </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::ELEMENT_END</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::ELEMENT_END</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_ELEMENT_START"> </a><div class="element clickable constant  constant_ELEMENT_START" data-toggle="collapse" data-target=".constant_ELEMENT_START .collapse">
+<h2>ELEMENT_START</h2>
+<pre>ELEMENT_START </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\Element::ELEMENT_START</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\no\malmanger\mjqm\JqmElement::ELEMENT_START</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-11T19:11:34+02:00.<br></footer></div>
+</div>
+</body>
+</html>

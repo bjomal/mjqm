@@ -1,0 +1,3722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="helper.php" hash="d0e19a5c2fc07e9a68ef8a7177ca0ad9" package="Default">
+    <docblock line="2">
+      <description>Help functions and classes for MJQM</description>
+      <long-description/>
+    </docblock>
+    <constant namespace="global" line="11" package="Default">
+      <name>MJQM_NOTHING</name>
+      <full_name>\MJQM_NOTHING</full_name>
+      <value>10</value>
+    </constant>
+    <constant namespace="global" line="12" package="Default">
+      <name>MJQM_ERROR</name>
+      <full_name>\MJQM_ERROR</full_name>
+      <value>8</value>
+    </constant>
+    <constant namespace="global" line="13" package="Default">
+      <name>MJQM_WARNING</name>
+      <full_name>\MJQM_WARNING</full_name>
+      <value>6</value>
+    </constant>
+    <constant namespace="global" line="14" package="Default">
+      <name>MJQM_INFROMATION</name>
+      <full_name>\MJQM_INFROMATION</full_name>
+      <value>4</value>
+    </constant>
+    <constant namespace="global" line="15" package="Default">
+      <name>MJQM_DEBUG</name>
+      <full_name>\MJQM_DEBUG</full_name>
+      <value>2</value>
+    </constant>
+    <constant namespace="global" line="16" package="Default">
+      <name>MJQM_DEFAULT</name>
+      <full_name>\MJQM_DEFAULT</full_name>
+      <value>MJQM_WARNING</value>
+    </constant>
+    <function namespace="no\malmanger\mjqm" line="84" package="Default">
+      <name>arri_find_key</name>
+      <full_name>\no\malmanger\mjqm\arri_find_key</full_name>
+      <docblock line="78">
+        <description>Case innsensitive search for key in array.</description>
+        <long-description/>
+        <tag line="78" name="param" description="The case insensitive key to search for" type="mixed" variable="$needle">
+          <type by_reference="false">mixed</type>
+        </tag>
+        <tag line="78" name="param" description="The array containing values" type="array" variable="$haystack">
+          <type by_reference="false">array</type>
+        </tag>
+        <tag line="78" name="return" description="Returns the proper cased key FALSE otherwise" type="string|boolean">
+          <type by_reference="false">string</type>
+          <type by_reference="false">boolean</type>
+        </tag>
+      </docblock>
+      <argument line="84">
+        <name>$needle</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="84">
+        <name>$haystack</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="no\malmanger\mjqm" line="99" package="Default">
+      <name>arri_find_value</name>
+      <full_name>\no\malmanger\mjqm\arri_find_value</full_name>
+      <docblock line="93">
+        <description>Case innsensitive search for value in array.</description>
+        <long-description/>
+        <tag line="93" name="param" description="The case insensitive value to search for" type="mixed" variable="$needle">
+          <type by_reference="false">mixed</type>
+        </tag>
+        <tag line="93" name="param" description="The array containing values" type="array" variable="$haystack">
+          <type by_reference="false">array</type>
+        </tag>
+        <tag line="93" name="return" description="Returns the proper cased value FALSE otherwise" type="string|boolean">
+          <type by_reference="false">string</type>
+          <type by_reference="false">boolean</type>
+        </tag>
+      </docblock>
+      <argument line="99">
+        <name>$needle</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="99">
+        <name>$haystack</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="no\malmanger\mjqm" line="114" package="Default">
+      <name>arri_find_value_get_key</name>
+      <full_name>\no\malmanger\mjqm\arri_find_value_get_key</full_name>
+      <docblock line="108">
+        <description>Case innsensitive search for value in array.</description>
+        <long-description>&lt;p&gt;Getting the key for the value.&lt;/p&gt;</long-description>
+        <tag line="108" name="param" description="The case insensitive value to search for" type="mixed" variable="$needle">
+          <type by_reference="false">mixed</type>
+        </tag>
+        <tag line="108" name="param" description="The array containing values" type="array" variable="$haystack">
+          <type by_reference="false">array</type>
+        </tag>
+        <tag line="108" name="return" description="Returns the proper cased key FALSE otherwise" type="string|boolean">
+          <type by_reference="false">string</type>
+          <type by_reference="false">boolean</type>
+        </tag>
+      </docblock>
+      <argument line="114">
+        <name>$needle</name>
+        <default/>
+        <type/>
+      </argument>
+      <argument line="114">
+        <name>$haystack</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="21" package="Default">
+      <extends/>
+      <name>Log</name>
+      <full_name>\no\malmanger\mjqm\Log</full_name>
+      <docblock line="17">
+        <description>Log class to handle all logging</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="true" visibility="public" line="25" namespace="no\malmanger\mjqm" package="Default">
+        <name>$loglevels</name>
+        <default>array(MJQM_NOTHING =&gt; "Nothing", MJQM_ERROR =&gt; "Error", MJQM_WARNING =&gt; "Warning", MJQM_INFROMATION =&gt; "Information", MJQM_DEBUG =&gt; "Debug")</default>
+        <docblock line="22">
+          <description>$loglevels contains list of valid loglevels</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="no\malmanger\mjqm" line="36" package="Default">
+        <name>e</name>
+        <full_name>e</full_name>
+        <docblock line="31">
+          <description>e - Log an error</description>
+          <long-description/>
+          <tag line="31" name="param" description="The message to log" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="31" name="param" description="string $source Identy the caller" type="\no\malmanger\mjqm\optional" variable="$source">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="36">
+          <name>$message</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="36">
+          <name>$source</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="no\malmanger\mjqm" line="42" package="Default">
+        <name>w</name>
+        <full_name>w</full_name>
+        <docblock line="37">
+          <description>w - Log a warning</description>
+          <long-description/>
+          <tag line="37" name="param" description="The message to log" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="37" name="param" description="string $source Identy the caller" type="\no\malmanger\mjqm\optional" variable="$source">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="42">
+          <name>$message</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="42">
+          <name>$source</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="no\malmanger\mjqm" line="48" package="Default">
+        <name>i</name>
+        <full_name>i</full_name>
+        <docblock line="43">
+          <description>i - Log an information message</description>
+          <long-description/>
+          <tag line="43" name="param" description="The message to log" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="43" name="param" description="string $source Identy the caller" type="\no\malmanger\mjqm\optional" variable="$source">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="48">
+          <name>$message</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="48">
+          <name>$source</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="no\malmanger\mjqm" line="54" package="Default">
+        <name>d</name>
+        <full_name>d</full_name>
+        <docblock line="49">
+          <description>d - Log a debug message</description>
+          <long-description/>
+          <tag line="49" name="param" description="The message to log" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="49" name="param" description="string $source Identy the caller" type="\no\malmanger\mjqm\optional" variable="$source">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$message</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$source</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="no\malmanger\mjqm" line="61" package="Default">
+        <name>mjqm_log</name>
+        <full_name>mjqm_log</full_name>
+        <docblock line="55">
+          <description>mjqm_log - Log a debug message</description>
+          <long-description/>
+          <tag line="55" name="param" description="The message to log" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="55" name="param" description="The loglevel for this message" type="string" variable="$loglevel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="55" name="param" description="string $source Identy the caller" type="\no\malmanger\mjqm\optional" variable="$source">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="61">
+          <name>$message</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="61">
+          <name>$loglevel</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="61">
+          <name>$source</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <markers>
+      <todo line="67">Replace this with som real log funksjonality</todo>
+    </markers>
+  </file>
+  <file path="classes/headmeta.class.php" hash="54bbb5d0cb99d0323f68cea63434def9" package="Default">
+    <docblock line="2">
+      <description>Handles Meta elements for Head class</description>
+      <long-description/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="11" package="Default">
+      <extends>\no\malmanger\mjqm\Element</extends>
+      <name>HeadMeta</name>
+      <full_name>\no\malmanger\mjqm\HeadMeta</full_name>
+      <docblock line="7">
+        <description>HeadMeta simple class to handle meta elements for the header.</description>
+        <long-description/>
+      </docblock>
+      <constant namespace="no\malmanger\mjqm" line="15" package="Default">
+        <name>ELEMENT_NAME</name>
+        <full_name>ELEMENT_NAME</full_name>
+        <value>'meta'</value>
+        <docblock line="12">
+          <description>ELEMENT_NAME</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="20" namespace="no\malmanger\mjqm" package="Default">
+        <name>$name</name>
+        <default/>
+        <docblock line="17">
+          <description>$name is the name attribute of the meta element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="24" namespace="no\malmanger\mjqm" package="Default">
+        <name>$content</name>
+        <default/>
+        <docblock line="21">
+          <description>$content is the content attribute of the meta element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="32" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="26">
+          <description>Constructor for creating a new HeadMeta object</description>
+          <long-description/>
+          <tag line="26" name="param" description="The name of the meta element" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="26" name="param" description="The content of the metaelement" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="32">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="32">
+          <name>$content</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="44" package="Default">
+        <name>setContent</name>
+        <full_name>setContent</full_name>
+        <docblock line="39">
+          <description>Sett the meta content</description>
+          <long-description/>
+          <tag line="39" name="param" description="The content of the metaelement" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$content</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="52" package="Default">
+        <name>getContent</name>
+        <full_name>getContent</full_name>
+        <docblock line="47">
+          <description>Get the content of the meta element</description>
+          <long-description/>
+          <tag line="47" name="return" description="$content Returns the meta content." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="60" package="Default">
+        <name>getName</name>
+        <full_name>getName</full_name>
+        <docblock line="55">
+          <description>Get the current meta element name attribute</description>
+          <long-description/>
+          <tag line="55" name="return" description="$name Returns the meta name." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="68" package="Default">
+        <name>attributes</name>
+        <full_name>attributes</full_name>
+        <docblock line="64">
+          <description>Get a string of attribute=value pairs</description>
+          <long-description/>
+          <tag line="64" name="return" description="$attributes String containing the attributes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="classes/headlink.class.php" hash="d601dbccd067485b311f0c8968824d48" package="Default">
+    <docblock line="2">
+      <description>Handles Link elements for Head class</description>
+      <long-description/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="12" package="Default">
+      <extends>\no\malmanger\mjqm\Element</extends>
+      <name>HeadLink</name>
+      <full_name>\no\malmanger\mjqm\HeadLink</full_name>
+      <docblock line="8">
+        <description>HeadLink simple class to handle link elements in the header.</description>
+        <long-description/>
+      </docblock>
+      <constant namespace="no\malmanger\mjqm" line="16" package="Default">
+        <name>DEFAULT_SIZES</name>
+        <full_name>DEFAULT_SIZES</full_name>
+        <value>'48x48'</value>
+        <docblock line="13">
+          <description>DEFAULT_SIZES</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="20" package="Default">
+        <name>ELEMENT_NAME</name>
+        <full_name>ELEMENT_NAME</full_name>
+        <value>'link'</value>
+        <docblock line="17">
+          <description>ELEMENT_NAME</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="24" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_href</name>
+        <default>""</default>
+        <docblock line="21">
+          <description>$_href is the href attribute of the link element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_media</name>
+        <default>""</default>
+        <docblock line="25">
+          <description>$_media is the media attribute of the link element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="32" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_rel</name>
+        <default>""</default>
+        <docblock line="29">
+          <description>$_rel is the rel attribute of the link element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="36" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_type</name>
+        <default>""</default>
+        <docblock line="33">
+          <description>$_type is the rel attribute of the link element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="40" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_sizes</name>
+        <default>""</default>
+        <docblock line="37">
+          <description>$_sizes is the sizes attribute of the link element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="44" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_custom</name>
+        <default>""</default>
+        <docblock line="41">
+          <description>$_custom contains custom attributes for this element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="54" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="46">
+          <description>Constructor for creating a new HeadLink object</description>
+          <long-description/>
+          <tag line="46" name="param" description="The rel of the meta element" type="string" variable="$rel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="The href of the metaelement" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="The mime-type of the linked dokument" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="46" name="param" description="= &quot;48x48&quot; The expected size of icon" type="string" variable="$sizes">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="54">
+          <name>$rel</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$href</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$type</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$sizes</name>
+          <default>self::DEFAULT_SIZES</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="73" package="Default">
+        <name>setHref</name>
+        <full_name>setHref</full_name>
+        <docblock line="68">
+          <description>Set the meta href</description>
+          <long-description/>
+          <tag line="68" name="param" description="The href of the link element" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="73">
+          <name>$href</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="81" package="Default">
+        <name>getHref</name>
+        <full_name>getHref</full_name>
+        <docblock line="76">
+          <description>Get the href of the meta element</description>
+          <long-description/>
+          <tag line="76" name="return" description="$href Returns the meta href." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="89" package="Default">
+        <name>setMedia</name>
+        <full_name>setMedia</full_name>
+        <docblock line="84">
+          <description>Set the meta media</description>
+          <long-description/>
+          <tag line="84" name="param" description="The media of the link element" type="string" variable="$media">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="89">
+          <name>$media</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="97" package="Default">
+        <name>getMedia</name>
+        <full_name>getMedia</full_name>
+        <docblock line="92">
+          <description>Get the media of the meta element</description>
+          <long-description/>
+          <tag line="92" name="return" description="$media Returns the meta media." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="105" package="Default">
+        <name>setRel</name>
+        <full_name>setRel</full_name>
+        <docblock line="100">
+          <description>Set the meta rel</description>
+          <long-description/>
+          <tag line="100" name="param" description="The rel of the link element" type="string" variable="$rel">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="105">
+          <name>$rel</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="113" package="Default">
+        <name>getRel</name>
+        <full_name>getRel</full_name>
+        <docblock line="108">
+          <description>Get the rel of the meta element</description>
+          <long-description/>
+          <tag line="108" name="return" description="$rel Returns the meta rel." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="121" package="Default">
+        <name>setType</name>
+        <full_name>setType</full_name>
+        <docblock line="116">
+          <description>Set the meta type</description>
+          <long-description/>
+          <tag line="116" name="param" description="The type of the link element" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="121">
+          <name>$type</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="129" package="Default">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="124">
+          <description>Get the type of the meta element</description>
+          <long-description/>
+          <tag line="124" name="return" description="$type Returns the meta type." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="137" package="Default">
+        <name>setSizes</name>
+        <full_name>setSizes</full_name>
+        <docblock line="132">
+          <description>Set the meta sizes</description>
+          <long-description/>
+          <tag line="132" name="param" description="= &quot;48x48&quot; The sizes of the link element" type="string" variable="$sizes">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="137">
+          <name>$sizes</name>
+          <default>self::DEFAULT_SIZES</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="145" package="Default">
+        <name>getSizes</name>
+        <full_name>getSizes</full_name>
+        <docblock line="140">
+          <description>Get the sizes of the meta element</description>
+          <long-description/>
+          <tag line="140" name="return" description="$sizes Returns the meta sizes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="154" package="Default">
+        <name>setCustom</name>
+        <full_name>setCustom</full_name>
+        <docblock line="149">
+          <description>Set the link extra attributes</description>
+          <long-description/>
+          <tag line="149" name="param" description="= &quot;&quot; The custom of the link element" type="string" variable="$custom">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="154">
+          <name>$custom</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="162" package="Default">
+        <name>getCustom</name>
+        <full_name>getCustom</full_name>
+        <docblock line="157">
+          <description>Get the custom of the meta element</description>
+          <long-description/>
+          <tag line="157" name="return" description="$custom Returns the meta custom." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="171" package="Default">
+        <name>attributes</name>
+        <full_name>attributes</full_name>
+        <docblock line="167">
+          <description>Get a string of attribute=value pairs</description>
+          <long-description/>
+          <tag line="167" name="return" description="$attributes String containing the attributes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="classes/form.class.php" hash="b352a3e5c5bb5ade82930f0ddceb3e37" package="Default">
+    <docblock line="2">
+      <description>File for Form class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="12" package="Default">
+      <extends>\no\malmanger\mjqm\BaseModel</extends>
+      <name>Form</name>
+      <full_name>\no\malmanger\mjqm\Form</full_name>
+      <docblock line="8">
+        <description>Form class handles support for jquery-mobile pages.</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="16" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_form</name>
+        <default>null</default>
+        <docblock line="13">
+          <description>form element tag</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="20" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_action</name>
+        <default>null</default>
+        <docblock line="17">
+          <description>form action attribute</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="24" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_id</name>
+        <default>null</default>
+        <docblock line="21">
+          <description>form id attribute</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_method</name>
+        <default>null</default>
+        <docblock line="25">
+          <description>form method attribute</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="33" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_content</name>
+        <default>null</default>
+        <docblock line="30">
+          <description>form  content</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="42" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="37">
+          <description>Create the form object</description>
+          <long-description/>
+          <tag line="37" name="param" description="= '' set the id attribute of the form element" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="37" name="param" description="= 'a' sets which theme-roller theme to use" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="42">
+          <name>$id</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="42">
+          <name>$action</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="42">
+          <name>$method</name>
+          <default>'post'</default>
+          <type/>
+        </argument>
+        <argument line="42">
+          <name>$data_theme</name>
+          <default>\no\malmanger\mjqm\JqmElement::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="56" package="Default">
+        <name>setId</name>
+        <full_name>setId</full_name>
+        <docblock line="51">
+          <description>set Form id</description>
+          <long-description/>
+          <tag line="51" name="param" description="= ''" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="56">
+          <name>$id</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="64" package="Default">
+        <name>getId</name>
+        <full_name>getId</full_name>
+        <docblock line="59">
+          <description>get Form id</description>
+          <long-description/>
+          <tag line="59" name="return" description="$id = ''" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="72" package="Default">
+        <name>setAction</name>
+        <full_name>setAction</full_name>
+        <docblock line="67">
+          <description>set Form action</description>
+          <long-description/>
+          <tag line="67" name="param" description="= ''" type="string" variable="$action">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="72">
+          <name>$action</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="80" package="Default">
+        <name>getAction</name>
+        <full_name>getAction</full_name>
+        <docblock line="75">
+          <description>set Form action</description>
+          <long-description/>
+          <tag line="75" name="return" description="$action = ''" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="88" package="Default">
+        <name>setMethod</name>
+        <full_name>setMethod</full_name>
+        <docblock line="83">
+          <description>set Form method</description>
+          <long-description/>
+          <tag line="83" name="param" description="= ''" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="88">
+          <name>$method</name>
+          <default>'post'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="96" package="Default">
+        <name>getMethod</name>
+        <full_name>getMethod</full_name>
+        <docblock line="91">
+          <description>get Form method</description>
+          <long-description/>
+          <tag line="91" name="return" description="$method = ''" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="37" code="50014">Name of argument $action does not match with the DocBlock's name $data_theme in __construct()</error>
+      <error line="37" code="50015">Argument $method is missing from the Docblock of __construct()</error>
+      <error line="37" code="50015">Argument $data_theme is missing from the Docblock of __construct()</error>
+    </parse_markers>
+  </file>
+  <file path="classes/element.class.php" hash="bc3491f9531d0d6d27203f6a4eb916c8" package="Default">
+    <docblock line="2">
+      <description>File for the Element class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="13" package="Default">
+      <extends>\no\malmanger\mjqm\Chain</extends>
+      <implements>\no\malmanger\mjqm\IElement</implements>
+      <name>Element</name>
+      <full_name>\no\malmanger\mjqm\Element</full_name>
+      <docblock line="9">
+        <description>Element class handles support for html elements.</description>
+        <long-description/>
+      </docblock>
+      <constant namespace="no\malmanger\mjqm" line="14" package="Default">
+        <name>ELEMENT_CLOSED</name>
+        <full_name>ELEMENT_CLOSED</full_name>
+        <value>1</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="15" package="Default">
+        <name>ELEMENT_START</name>
+        <full_name>ELEMENT_START</full_name>
+        <value>2</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="16" package="Default">
+        <name>ELEMENT_EMPTY</name>
+        <full_name>ELEMENT_EMPTY</full_name>
+        <value>3</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="17" package="Default">
+        <name>ELEMENT_CONTENT</name>
+        <full_name>ELEMENT_CONTENT</full_name>
+        <value>4</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="18" package="Default">
+        <name>ELEMENT_END</name>
+        <full_name>ELEMENT_END</full_name>
+        <value>0</value>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="22" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_customAttributes</name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>array of custom 'overloaded' attributes.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="26" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_classes</name>
+        <default>array()</default>
+        <docblock line="23">
+          <description>array of classes.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="30" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_id</name>
+        <default>""</default>
+        <docblock line="27">
+          <description>element id</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="34" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_title</name>
+        <default>""</default>
+        <docblock line="31">
+          <description>element title</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="38" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_content</name>
+        <default>array()</default>
+        <docblock line="35">
+          <description>element content</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="44" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_element_name</name>
+        <default/>
+        <docblock line="40">
+          <description>string containing the name of the element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="49" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="45">
+          <description>Default constructor for new elements</description>
+          <long-description/>
+          <tag line="45" name="param" description="Name of new element i.e. 'link' or 'div'" type="string" variable="$element_name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$element_name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="57" package="Default">
+        <name>__set</name>
+        <full_name>__set</full_name>
+        <docblock line="52">
+          <description>Used to overload set Property</description>
+          <long-description/>
+          <tag line="52" name="param" description="Name of property to set." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="52" name="param" description="The value to give the property" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="70" package="Default">
+        <name>__get</name>
+        <full_name>__get</full_name>
+        <docblock line="65">
+          <description>Used to overload get Property</description>
+          <long-description/>
+          <tag line="65" name="param" description="Name of property to set." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="65" name="return" description="$value for the spesified property $name." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="83" package="Default">
+        <name>__isset</name>
+        <full_name>__isset</full_name>
+        <docblock line="78">
+          <description>Used to overload isset for selected Property</description>
+          <long-description/>
+          <tag line="78" name="param" description="Name of property to check for." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="78" name="return" description="$isset true if propertyfor the spesified property $name." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="83">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="95" package="Default">
+        <name>__unset</name>
+        <full_name>__unset</full_name>
+        <docblock line="91">
+          <description>Unset the selected Property</description>
+          <long-description/>
+          <tag line="91" name="param" description="Name of property to set." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="95">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="106" package="Default">
+        <name>addClass</name>
+        <full_name>addClass</full_name>
+        <docblock line="102">
+          <description>add class to element</description>
+          <long-description/>
+          <tag line="102" name="param" description="class('s) to add. Use space ' ' separated list of classnames" type="string" variable="$classnames">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="106">
+          <name>$classnames</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="118" package="Default">
+        <name>deleteClass</name>
+        <full_name>deleteClass</full_name>
+        <docblock line="114">
+          <description>remove class from element</description>
+          <long-description/>
+          <tag line="114" name="param" description="class('s) to remove. Use space ' ' separated list of classnames" type="string" variable="$classnames">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="118">
+          <name>$classnames</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="130" package="Default">
+        <name>unsetClass</name>
+        <full_name>unsetClass</full_name>
+        <docblock line="127">
+          <description>clear list of classes for element</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="139" package="Default">
+        <name>getClass</name>
+        <full_name>getClass</full_name>
+        <docblock line="134">
+          <description>get classes for element</description>
+          <long-description/>
+          <tag line="134" name="param" description="If classes should be returned as an array instead og a space separated string." type="boolean" variable="$return_array">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="134" name="return" description="$classnames class('s) to add. Use space ' ' separated list of classnames" type="string|array">
+            <type by_reference="false">string</type>
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="139">
+          <name>$return_array</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="151" package="Default">
+        <name>setId</name>
+        <full_name>setId</full_name>
+        <docblock line="147">
+          <description>Set the ID attribute of the element</description>
+          <long-description/>
+          <tag line="147" name="param" description="the ID to set" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="151">
+          <name>$id</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="158" package="Default">
+        <name>unsetId</name>
+        <full_name>unsetId</full_name>
+        <docblock line="154">
+          <description>Remove the ID from the element</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="169" package="Default">
+        <name>addContent</name>
+        <full_name>addContent</full_name>
+        <docblock line="162">
+          <description>Add content to element</description>
+          <long-description/>
+          <tag line="162" name="param" description="the content to add.&#10;string is handled as pure text (html for output)&#10;Element is rendered with the element() method&#10;array's can contain string, Element og even more arrays" type="string|array|\no\malmanger\mjqm\Element" variable="$content">
+            <type by_reference="false">string</type>
+            <type by_reference="false">array</type>
+            <type by_reference="false">\no\malmanger\mjqm\Element</type>
+          </tag>
+        </docblock>
+        <argument line="169">
+          <name>$content</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="179" package="Default">
+        <name>unaddContent</name>
+        <full_name>unaddContent</full_name>
+        <docblock line="175">
+          <description>Remove the content from the element</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="186" package="Default">
+        <name>getContent</name>
+        <full_name>getContent</full_name>
+        <docblock line="182">
+          <description>Get text content for the element</description>
+          <long-description/>
+          <tag line="182" name="return" description="" type="\no\malmanger\mjqm\array($content)">
+            <type by_reference="false">\no\malmanger\mjqm\array($content)</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="196" package="Default">
+        <name>renderContent</name>
+        <full_name>renderContent</full_name>
+        <docblock line="190">
+          <description>Make a html representation for the content array</description>
+          <long-description/>
+          <tag line="190" name="param" description="" type="array" variable="$contentList">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="190" name="return" description="$html" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="196">
+          <name>$contentList</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="221" package="Default">
+        <name>customAttributes</name>
+        <full_name>customAttributes</full_name>
+        <docblock line="217">
+          <description>Get the custom attributes defined</description>
+          <long-description/>
+          <tag line="217" name="return" description="of $name -&gt; $value pairs" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="230" package="Default">
+        <name>getOpenElement</name>
+        <full_name>getOpenElement</full_name>
+        <docblock line="225">
+          <description>Get the start of the element including attributes</description>
+          <long-description/>
+          <tag line="225" name="param" description="= false If returned element should be closed immediately with ' /&gt;'" type="boolean" variable="$closed">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="225" name="return" description="$openelement the starting '&lt;element attribute=&quot;xx&quot; ... &gt;'" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="230">
+          <name>$closed</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="245" package="Default">
+        <name>getCloseElement</name>
+        <full_name>getCloseElement</full_name>
+        <docblock line="241">
+          <description>Get the the closing html for the tag</description>
+          <long-description/>
+          <tag line="241" name="return" description="'&lt;/element&gt;'" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="270" package="Default">
+        <name>element</name>
+        <full_name>element</full_name>
+        <docblock line="249">
+          <description>Get the complete element tag.</description>
+          <long-description/>
+          <tag line="249" name="param" description="=  self::ELEMETN_CONTENT is a complete element with&#10;The four alternatives for $complete is:&lt;pre&gt;&lt;code&gt;&#10;A: CLOSED_ELEMENT&#10;&amp;amp;lt;element attr=&quot;xx yy&quot; /&amp;amp;gt;&#10;B: START_ELEMENT&#10;&amp;amp;lt;element attr=&quot;xx yy&quot;&amp;amp;gt;&#10;C: EMPTY_ELEMENT&#10;&amp;amp;lt;element attr=&quot;xx yy&quot;&amp;amp;gt;&amp;amp;lt;/element&amp;amp;gt;&#10;D: CONTENT_ELEMENT&#10;&amp;amp;lt;element attr=&quot;xx yy&quot;&amp;amp;gt;&#10;   sss sss sss sss ldldldldl&#10;   kdl ølsdk ølskdøl sd ølsdkølsk&#10;aølskd ksa øasøl døla&#10;&amp;amp;lt;/element&amp;amp;gt;&lt;/code&gt;&lt;/pre&gt;" type="int" variable="$complete">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="249" name="return" description="complete tag" type="\no\malmanger\mjqm\the">
+            <type by_reference="false">\no\malmanger\mjqm\the</type>
+          </tag>
+        </docblock>
+        <argument line="270">
+          <name>$complete</name>
+          <default>self::ELEMENT_CONTENT</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="289" package="Default">
+        <name>attributes</name>
+        <full_name>attributes</full_name>
+        <docblock line="284">
+          <description>Get a string of attribute=value pairs
+If overloaded in subclasses you should do a '$attributes .= parent::attributes();' at the end</description>
+          <long-description/>
+          <tag line="284" name="return" description="$attributes String containing the attributes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="321" package="Default">
+        <name>chain_classes</name>
+        <full_name>chain_classes</full_name>
+        <docblock line="317">
+          <description>Chainable version of adding classes.</description>
+          <long-description/>
+          <tag line="317" name="param" description="The classes to add to element. False value (default) clears classes." type="string|boolean" variable="$classnames">
+            <type by_reference="false">string</type>
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="321">
+          <name>$classnames</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="332" package="Default">
+        <name>chain_id</name>
+        <full_name>chain_id</full_name>
+        <docblock line="328">
+          <description>Chainable version of setting id.</description>
+          <long-description/>
+          <tag line="328" name="param" description="The id to set for element. Empty string removes id." type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="332">
+          <name>$id</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="344" package="Default">
+        <name>chain_content</name>
+        <full_name>chain_content</full_name>
+        <docblock line="340">
+          <description>Chainable version of setting content.</description>
+          <long-description/>
+          <tag line="340" name="param" description="The content to add to element." type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="344">
+          <name>$content</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="classes/irenderable.interface.php" hash="b2790757ff5beb0c71637b6cb55cc29f" package="Default">
+    <docblock line="2">
+      <description>Interface for classes which is supposed to render a View.</description>
+      <long-description/>
+    </docblock>
+    <interface namespace="no\malmanger\mjqm" line="10" package="Default">
+      <name>IRenderable</name>
+      <full_name>\no\malmanger\mjqm\IRenderable</full_name>
+      <docblock line="7">
+        <description/>
+        <long-description/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="15" package="Default">
+        <name>render</name>
+        <full_name>render</full_name>
+        <docblock line="11">
+          <description>Call this to enable viewing of the class</description>
+          <long-description/>
+          <tag line="11" name="param" description="Wether output should be written to outputbuffer or returned as a string" type="boolean" variable="$direct_output">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="15">
+          <name>$direct_output</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+  </file>
+  <file path="classes/basemodel.class.php" hash="70ee2ca9ec16f708296fd2a45ab5b8c7" package="Default">
+    <docblock line="2">
+      <description>This file contains the base model for all viewable objects</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="11" package="Default">
+      <extends>\no\malmanger\mjqm\Chain</extends>
+      <implements>\no\malmanger\mjqm\IRenderable</implements>
+      <name>BaseModel</name>
+      <full_name>\no\malmanger\mjqm\BaseModel</full_name>
+      <docblock line="8">
+        <description>This class contains the base model for all viewable objects</description>
+        <long-description/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="19" package="Default">
+        <name>render</name>
+        <full_name>render</full_name>
+        <docblock line="13">
+          <description>Default model rendering.</description>
+          <long-description>&lt;p&gt;Classes could override this, but it's not required.&lt;/p&gt;</long-description>
+          <tag line="13" name="param" description="if output should go directly to screen. Default is true." type="boolean" variable="$direct_output">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="13" name="return" description="$output_buffer if $direct_output is set to false. Else nothing." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="19">
+          <name>$direct_output</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="classes/view.class.php" hash="589c2e41120b1acd7ef00c6e427be890" package="Default">
+    <docblock line="2">
+      <description>View class file</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <include line="82" type="Include" package="Default">
+      <name/>
+    </include>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="11" package="Default">
+      <extends>\no\malmanger\mjqm\Chain</extends>
+      <name>View</name>
+      <full_name>\no\malmanger\mjqm\View</full_name>
+      <docblock line="8">
+        <description>View class.</description>
+        <long-description>&lt;p&gt;Used to handle view templates for all models.&lt;/p&gt;</long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="15" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_model_template</name>
+        <default>""</default>
+        <docblock line="12">
+          <description>$_model_template contains path to template file</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="19" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_direct_output</name>
+        <default>true</default>
+        <docblock line="16">
+          <description>$_direct_output set to false to capture output buffer</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="25" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="21">
+          <description>Constructor</description>
+          <long-description/>
+          <tag line="21" name="param" description="string $modelName Name of renderable class" type="\no\malmanger\mjqm\optional" variable="$modelName">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$modelName</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="37" package="Default">
+        <name>setTemplate</name>
+        <full_name>setTemplate</full_name>
+        <docblock line="31">
+          <description>setTemplate sets the template file to use for the renderable</description>
+          <long-description/>
+          <tag line="31" name="param" description="Name of renderable class" type="string" variable="$modelName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="31" name="return" description="$this-&gt;_model_template the template file to be used." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="37">
+          <name>$modelName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="60" package="Default">
+        <name>setDirectOutput</name>
+        <full_name>setDirectOutput</full_name>
+        <docblock line="55">
+          <description>sets the template file to use for the renderable</description>
+          <long-description/>
+          <tag line="55" name="param" description="= true If we use direct output or not." type="boolean" variable="$direct_output">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="60">
+          <name>$direct_output</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="71" package="Default">
+        <name>render</name>
+        <full_name>render</full_name>
+        <docblock line="64">
+          <description>rendering the current Model with the given View Template</description>
+          <long-description/>
+          <tag line="64" name="param" description="This is an reference to the calling model class." type="object" variable="$data">
+            <type by_reference="false">object</type>
+          </tag>
+          <tag line="64" name="return" description="$output_buffer = &quot;&quot; Returns output_buffer if $direct_output is set to false. Else empty" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="71">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="102" package="Default">
+        <name>chain_template</name>
+        <full_name>chain_template</full_name>
+        <docblock line="96">
+          <description>template is a chainable version of setTemplate</description>
+          <long-description/>
+          <tag line="96" name="param" description="Name of renderable class" type="string" variable="$modelName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="96" name="return" description="reference to $this" type="\no\malmanger\mjqm\chainable">
+            <type by_reference="false">\no\malmanger\mjqm\chainable</type>
+          </tag>
+        </docblock>
+        <argument line="102">
+          <name>$modelName</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="111" package="Default">
+        <name>chain_directOutput</name>
+        <full_name>chain_directOutput</full_name>
+        <docblock line="105">
+          <description>directOutput is a chainable version of setDirectOutput</description>
+          <long-description/>
+          <tag line="105" name="param" description="= true If we use direct output or not." type="boolean" variable="$direct_output">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="105" name="return" description="reference to $this" type="\no\malmanger\mjqm\chainable">
+            <type by_reference="false">\no\malmanger\mjqm\chainable</type>
+          </tag>
+        </docblock>
+        <argument line="111">
+          <name>$direct_output</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="classes/pageelement.class.php" hash="d6e143bd149adb72361f2d89956ea8f7" package="Default">
+    <docblock line="2">
+      <description>File for PageElement class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="12" package="Default">
+      <extends>\no\malmanger\mjqm\JqmElement</extends>
+      <name>PageElement</name>
+      <full_name>\no\malmanger\mjqm\PageElement</full_name>
+      <docblock line="8">
+        <description>Page class handles support for jquery-mobile page elements.</description>
+        <long-description/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="20" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="15">
+          <description>Create the page object</description>
+          <long-description/>
+          <tag line="15" name="param" description="= '' set the id attribute of the page element" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="15" name="param" description="= self::DEFAULT_THEME sets which theme-roller theme to use" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="20">
+          <name>$id</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="20">
+          <name>$data_theme</name>
+          <default>self::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="classes/chain.class.php" hash="5cb8c11a536a1fc9a6d719b9dacbbff7" package="Default">
+    <docblock line="2">
+      <description>File for the Chain class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="13" package="Default">
+      <extends/>
+      <implements>\no\malmanger\mjqm\IChainable</implements>
+      <name>Chain</name>
+      <full_name>\no\malmanger\mjqm\Chain</full_name>
+      <docblock line="9">
+        <description>Chain class handles support for chainable methods in classes.</description>
+        <long-description/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="25" package="Default">
+        <name>__call</name>
+        <full_name>__call</full_name>
+        <docblock line="14">
+          <description>Descendants of this class must use `chain_` prefix for all
+methods they wish to make chainable.</description>
+          <long-description>&lt;p&gt;The method can then be
+called by its base name.&lt;/p&gt;
+
+&lt;p&gt;Return values from called methods are lost.&lt;/p&gt;</long-description>
+          <tag line="14" name="param" description="name of the method called" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="14" name="param" description="array of arguments supplied to method" type="array" variable="$arguments">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="14" name="return" description="$this instance of this class" type="\no\malmanger\mjqm\PlainChain">
+            <type by_reference="false">\no\malmanger\mjqm\PlainChain</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="25">
+          <name>$arguments</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="classes/page.class.php" hash="00c0cc5d5ba32f18b0411b9447380060" package="Default">
+    <docblock line="2">
+      <description>File for Page class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="12" package="Default">
+      <extends>\no\malmanger\mjqm\BaseModel</extends>
+      <name>Page</name>
+      <full_name>\no\malmanger\mjqm\Page</full_name>
+      <docblock line="8">
+        <description>Page class handles support for jquery-mobile pages.</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="17" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_page</name>
+        <default>null</default>
+        <docblock line="14">
+          <description>Page element tag</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="21" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_header</name>
+        <default>null</default>
+        <docblock line="18">
+          <description>Page header element tag</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="25" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_footer</name>
+        <default>null</default>
+        <docblock line="22">
+          <description>Page footer element tag</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="29" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_content</name>
+        <default>null</default>
+        <docblock line="26">
+          <description>Page content element tag</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="34" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_id</name>
+        <default>""</default>
+        <docblock line="31">
+          <description>$_id Page id</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="38" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_title</name>
+        <default>""</default>
+        <docblock line="35">
+          <description>$_title Page title</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="46" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="41">
+          <description>Create the page object</description>
+          <long-description/>
+          <tag line="41" name="param" description="= '' set the id attribute of the page element" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="41" name="param" description="= 'a' sets which theme-roller theme to use" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="46">
+          <name>$id</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="46">
+          <name>$data_theme</name>
+          <default>\no\malmanger\mjqm\JqmElement::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="58" package="Default">
+        <name>setId</name>
+        <full_name>setId</full_name>
+        <docblock line="53">
+          <description>set Page id</description>
+          <long-description/>
+          <tag line="53" name="param" description="= ''" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="58">
+          <name>$id</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="67" package="Default">
+        <name>setTitle</name>
+        <full_name>setTitle</full_name>
+        <docblock line="62">
+          <description>set Page title</description>
+          <long-description/>
+          <tag line="62" name="param" description="= '' set the title attribute of the page element" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="= '' sets which theme-roller theme to use for header" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="67">
+          <name>$title</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="67">
+          <name>$data_theme</name>
+          <default>''</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="80" package="Default">
+        <name>getTitle</name>
+        <full_name>getTitle</full_name>
+        <docblock line="76">
+          <description>get Page title</description>
+          <long-description/>
+          <tag line="76" name="return" description="$title get the title of the page" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="90" package="Default">
+        <name>setContent</name>
+        <full_name>setContent</full_name>
+        <docblock line="85">
+          <description>set Page content</description>
+          <long-description/>
+          <tag line="85" name="param" description="= '' set the content of the page element" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="85" name="param" description="= '' sets which theme-roller theme to use for content" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="90">
+          <name>$content</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="90">
+          <name>$data_theme</name>
+          <default>\no\malmanger\mjqm\JqmElement::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="103" package="Default">
+        <name>getContent</name>
+        <full_name>getContent</full_name>
+        <docblock line="99">
+          <description>get Page content</description>
+          <long-description/>
+          <tag line="99" name="return" description="$content get the content of the page" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="113" package="Default">
+        <name>setFooter</name>
+        <full_name>setFooter</full_name>
+        <docblock line="108">
+          <description>set Page footer</description>
+          <long-description/>
+          <tag line="108" name="param" description="= '' set the footer attribute of the page element" type="string" variable="$footer">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="108" name="param" description="= '' sets which theme-roller theme to use for footer" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="113">
+          <name>$footer</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="113">
+          <name>$data_theme</name>
+          <default>\no\malmanger\mjqm\JqmElement::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="126" package="Default">
+        <name>getFooter</name>
+        <full_name>getFooter</full_name>
+        <docblock line="122">
+          <description>get Page footer</description>
+          <long-description/>
+          <tag line="122" name="return" description="$footer get the footer of the page" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="135" package="Default">
+        <name>setPageTheme</name>
+        <full_name>setPageTheme</full_name>
+        <docblock line="131">
+          <description>set Page data_theme</description>
+          <long-description/>
+          <tag line="131" name="param" description="" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="135">
+          <name>$data_theme</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="143" package="Default">
+        <name>getPageTheme</name>
+        <full_name>getPageTheme</full_name>
+        <docblock line="139">
+          <description>get Page data_theme</description>
+          <long-description/>
+          <tag line="139" name="return" description="$data_theme" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="152" package="Default">
+        <name>setHeaderTheme</name>
+        <full_name>setHeaderTheme</full_name>
+        <docblock line="147">
+          <description>TODO: Fix this to use JqmElement
+set Header data_theme</description>
+          <long-description/>
+          <tag line="147" name="param" description="" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="152">
+          <name>$data_theme</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="160" package="Default">
+        <name>getHeaderTheme</name>
+        <full_name>getHeaderTheme</full_name>
+        <docblock line="155">
+          <description>TODO: Fix this to use JqmElement
+get Header data_theme</description>
+          <long-description/>
+          <tag line="155" name="return" description="$data_theme" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="170" package="Default">
+        <name>setFooterTheme</name>
+        <full_name>setFooterTheme</full_name>
+        <docblock line="165">
+          <description>TODO: Fix this
+set Footer data_theme</description>
+          <long-description/>
+          <tag line="165" name="param" description="" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="170">
+          <name>$data_theme</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="179" package="Default">
+        <name>getFooterTheme</name>
+        <full_name>getFooterTheme</full_name>
+        <docblock line="174">
+          <description>TODO: Fix this
+get Footer data_theme</description>
+          <long-description/>
+          <tag line="174" name="return" description="$data_theme" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="189" package="Default">
+        <name>page</name>
+        <full_name>page</full_name>
+        <docblock line="184">
+          <description>get Page element</description>
+          <long-description/>
+          <tag line="184" name="return" description="$page" type="\no\malmanger\mjqm\JqmElement">
+            <type by_reference="false">\no\malmanger\mjqm\JqmElement</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="197" package="Default">
+        <name>header</name>
+        <full_name>header</full_name>
+        <docblock line="192">
+          <description>get header element</description>
+          <long-description/>
+          <tag line="192" name="return" description="$header" type="\no\malmanger\mjqm\JqmElement">
+            <type by_reference="false">\no\malmanger\mjqm\JqmElement</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="206" package="Default">
+        <name>content</name>
+        <full_name>content</full_name>
+        <docblock line="200">
+          <description>get content element</description>
+          <long-description/>
+          <tag line="200" name="param" description="" type="\no\malmanger\mjqm\JqmElement" variable="$new_content">
+            <type by_reference="false">\no\malmanger\mjqm\JqmElement</type>
+          </tag>
+          <tag line="200" name="return" description="$content if content is omitted OR $this(chainable) if setting content" type="\no\malmanger\mjqm\Array(JqmElement)">
+            <type by_reference="false">\no\malmanger\mjqm\Array(JqmElement)</type>
+          </tag>
+        </docblock>
+        <argument line="206">
+          <name>$new_content</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="222" package="Default">
+        <name>footer</name>
+        <full_name>footer</full_name>
+        <docblock line="217">
+          <description>get footer element</description>
+          <long-description/>
+          <tag line="217" name="return" description="$footer" type="\no\malmanger\mjqm\JqmElement">
+            <type by_reference="false">\no\malmanger\mjqm\JqmElement</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="232" package="Default">
+        <name>chain_title</name>
+        <full_name>chain_title</full_name>
+        <docblock line="227">
+          <description>chainable version of setTitle</description>
+          <long-description/>
+          <tag line="227" name="param" description="= '' set the title attribute of the page element" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="227" name="param" description="= '' sets which theme-roller theme to use for header" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="232">
+          <name>$title</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="232">
+          <name>$data_theme</name>
+          <default>\no\malmanger\mjqm\JqmElement::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="classes/jqmelement.class.php" hash="d9b778768d3ee1e6c9a9edb2d3d43743" package="Default">
+    <docblock line="2">
+      <description>File for the Element class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="13" package="Default">
+      <extends>\no\malmanger\mjqm\Element</extends>
+      <name>JqmElement</name>
+      <full_name>\no\malmanger\mjqm\JqmElement</full_name>
+      <docblock line="9">
+        <description>JqmElement class handles support for html Jquery Mobile elements.</description>
+        <long-description/>
+      </docblock>
+      <constant namespace="no\malmanger\mjqm" line="17" package="Default">
+        <name>DR_PAGE</name>
+        <full_name>DR_PAGE</full_name>
+        <value>'page'</value>
+        <docblock line="14">
+          <description>constants for data-role</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="18" package="Default">
+        <name>DR_CONTENT</name>
+        <full_name>DR_CONTENT</full_name>
+        <value>'content'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="19" package="Default">
+        <name>DR_HEADER</name>
+        <full_name>DR_HEADER</full_name>
+        <value>'header'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="20" package="Default">
+        <name>DR_COLLAPSIBLE</name>
+        <full_name>DR_COLLAPSIBLE</full_name>
+        <value>'collapsible'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="21" package="Default">
+        <name>DR_LISTVIEW</name>
+        <full_name>DR_LISTVIEW</full_name>
+        <value>'listview'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="22" package="Default">
+        <name>DR_LIST_DIVIDER</name>
+        <full_name>DR_LIST_DIVIDER</full_name>
+        <value>'list-divider'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="23" package="Default">
+        <name>DR_FOOTER</name>
+        <full_name>DR_FOOTER</full_name>
+        <value>'footer'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="24" package="Default">
+        <name>DR_CONTROLGROUP</name>
+        <full_name>DR_CONTROLGROUP</full_name>
+        <value>'controlgroup'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="25" package="Default">
+        <name>DR_FIELDCONTAIN</name>
+        <full_name>DR_FIELDCONTAIN</full_name>
+        <value>'fieldcontain'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="26" package="Default">
+        <name>DR_SLIDER</name>
+        <full_name>DR_SLIDER</full_name>
+        <value>'slider'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="27" package="Default">
+        <name>DR_BUTTON</name>
+        <full_name>DR_BUTTON</full_name>
+        <value>'button'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="28" package="Default">
+        <name>DR_NAVBAR</name>
+        <full_name>DR_NAVBAR</full_name>
+        <value>'navbar'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="29" package="Default">
+        <name>DR_NONE</name>
+        <full_name>DR_NONE</full_name>
+        <value>'none'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="30" package="Default">
+        <name>DR_COLLAPSIBLE_SET</name>
+        <full_name>DR_COLLAPSIBLE_SET</full_name>
+        <value>'collapsible-set'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="35" package="Default">
+        <name>DI_TRUE</name>
+        <full_name>DI_TRUE</full_name>
+        <value>'true'</value>
+        <docblock line="32">
+          <description>constants for data-inset true or false</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="36" package="Default">
+        <name>DI_FALSE</name>
+        <full_name>DI_FALSE</full_name>
+        <value>'false'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="41" package="Default">
+        <name>DT_A</name>
+        <full_name>DT_A</full_name>
+        <value>'a'</value>
+        <docblock line="38">
+          <description>Constants for data-theme a.</description>
+          <long-description>&lt;p&gt;.d&lt;/p&gt;</long-description>
+        </docblock>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="42" package="Default">
+        <name>DT_B</name>
+        <full_name>DT_B</full_name>
+        <value>'b'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="43" package="Default">
+        <name>DT_C</name>
+        <full_name>DT_C</full_name>
+        <value>'c'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="44" package="Default">
+        <name>DT_D</name>
+        <full_name>DT_D</full_name>
+        <value>'d'</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="49" package="Default">
+        <name>DEFAULT_ROLE</name>
+        <full_name>DEFAULT_ROLE</full_name>
+        <value>self::DR_CONTENT</value>
+        <docblock line="46">
+          <description>Defaults</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="50" package="Default">
+        <name>DEFAULT_THEME</name>
+        <full_name>DEFAULT_THEME</full_name>
+        <value>self::DT_A</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="51" package="Default">
+        <name>DEFAULT_ICON</name>
+        <full_name>DEFAULT_ICON</full_name>
+        <value>''</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="52" package="Default">
+        <name>DEFAULT_DIRECTION</name>
+        <full_name>DEFAULT_DIRECTION</full_name>
+        <value>''</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="53" package="Default">
+        <name>DEFAULT_TRANSITION</name>
+        <full_name>DEFAULT_TRANSITION</full_name>
+        <value>''</value>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="54" package="Default">
+        <name>DEFAULT_INSET</name>
+        <full_name>DEFAULT_INSET</full_name>
+        <value>''</value>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="56" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_data_role</name>
+        <default>self::DEFAULT_ROLE</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="57" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_data_theme</name>
+        <default>self::DEFAULT_THEME</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="58" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_data_icon</name>
+        <default>''</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="59" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_data_direction</name>
+        <default>''</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="60" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_data_transition</name>
+        <default>''</default>
+      </property>
+      <property final="false" static="false" visibility="protected" line="61" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_data_inset</name>
+        <default>''</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="67" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="63">
+          <description>Default constructor for new elements</description>
+          <long-description/>
+          <tag line="63" name="param" description="Name of new element i.e. 'link' or 'div'" type="string" variable="$element_name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="67">
+          <name>$data_role</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="67">
+          <name>$element_name</name>
+          <default>'div'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="78" package="Default">
+        <name>setDataRole</name>
+        <full_name>setDataRole</full_name>
+        <docblock line="73">
+          <description>Set the jqm data-role</description>
+          <long-description/>
+          <tag line="73" name="param" description="The datarole of the jqm element" type="string" variable="$dataRole">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="78">
+          <name>$data_role</name>
+          <default>self::DEFAULT_ROLE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="90" package="Default">
+        <name>getDataRole</name>
+        <full_name>getDataRole</full_name>
+        <docblock line="85">
+          <description>Get the data-role of the jqm element</description>
+          <long-description/>
+          <tag line="85" name="return" description="$data_role Returns the jqm datarole." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="99" package="Default">
+        <name>setDataTheme</name>
+        <full_name>setDataTheme</full_name>
+        <docblock line="94">
+          <description>Set the jqm data-theme</description>
+          <long-description/>
+          <tag line="94" name="param" description="The datarole of the jqm element" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="99">
+          <name>$data_theme</name>
+          <default>self::DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="114" package="Default">
+        <name>getDataTheme</name>
+        <full_name>getDataTheme</full_name>
+        <docblock line="109">
+          <description>Get the data-theme of the jqm element</description>
+          <long-description/>
+          <tag line="109" name="return" description="$data_theme Returns the jqm datarole." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="123" package="Default">
+        <name>setDataIcon</name>
+        <full_name>setDataIcon</full_name>
+        <docblock line="118">
+          <description>Set the jqm data-icon</description>
+          <long-description/>
+          <tag line="118" name="param" description="The dataicon of the jqm element" type="string" variable="$data_icon">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="123">
+          <name>$data_icon</name>
+          <default>self::DEFAULT_ICON</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="135" package="Default">
+        <name>getDataIcon</name>
+        <full_name>getDataIcon</full_name>
+        <docblock line="130">
+          <description>Get the data-icon of the jqm element</description>
+          <long-description/>
+          <tag line="130" name="return" description="$data_icon Returns the jqm dataicon." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="144" package="Default">
+        <name>setDataDirection</name>
+        <full_name>setDataDirection</full_name>
+        <docblock line="139">
+          <description>direction
+Set the jqm data-direction</description>
+          <long-description/>
+          <tag line="139" name="param" description="The datadirection of the jqm element" type="string" variable="$data_direction">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="144">
+          <name>$data_direction</name>
+          <default>self::DEFAULT_DIRECTION</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="156" package="Default">
+        <name>getDataDirection</name>
+        <full_name>getDataDirection</full_name>
+        <docblock line="151">
+          <description>Get the data-direction of the jqm element</description>
+          <long-description/>
+          <tag line="151" name="return" description="$data_direction Returns the jqm datadirection." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="165" package="Default">
+        <name>setDataTransition</name>
+        <full_name>setDataTransition</full_name>
+        <docblock line="160">
+          <description>transition
+Set the jqm data-transition</description>
+          <long-description/>
+          <tag line="160" name="param" description="The datatransition of the jqm element" type="string" variable="$data_transition">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="165">
+          <name>$data_transition</name>
+          <default>self::DEFAULT_TRANSITION</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="177" package="Default">
+        <name>getDataTransition</name>
+        <full_name>getDataTransition</full_name>
+        <docblock line="172">
+          <description>Get the data-transition of the jqm element</description>
+          <long-description/>
+          <tag line="172" name="return" description="$data_transition Returns the jqm datatransition." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="186" package="Default">
+        <name>setDataInset</name>
+        <full_name>setDataInset</full_name>
+        <docblock line="181">
+          <description>inset
+Set the jqm data-inset</description>
+          <long-description/>
+          <tag line="181" name="param" description="The datainset of the jqm element" type="string" variable="$dataInset">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="186">
+          <name>$data_inset</name>
+          <default>self::DEFAULT_INSET</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="198" package="Default">
+        <name>getDataInset</name>
+        <full_name>getDataInset</full_name>
+        <docblock line="193">
+          <description>Get the data-inset of the jqm element</description>
+          <long-description/>
+          <tag line="193" name="return" description="$data_inset Returns the jqm datainset." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="211" package="Default">
+        <name>attributes</name>
+        <full_name>attributes</full_name>
+        <docblock line="207">
+          <description>Get a string of attribute=value pairs</description>
+          <long-description/>
+          <tag line="207" name="return" description="$attributes String containing the attributes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="246" package="Default">
+        <name>chain_data_role</name>
+        <full_name>chain_data_role</full_name>
+        <docblock line="242">
+          <description>chainable version of setDataRole()</description>
+          <long-description/>
+          <tag line="242" name="param" description="= DEFAULT_ROLE" type="string" variable="$data_role">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="246">
+          <name>$data_role</name>
+          <default>DEFAULT_ROLE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="253" package="Default">
+        <name>chain_data_theme</name>
+        <full_name>chain_data_theme</full_name>
+        <docblock line="249">
+          <description>chainable version of setDataTheme()</description>
+          <long-description/>
+          <tag line="249" name="param" description="= DEFAULT_THEME" type="string" variable="$data_role">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="253">
+          <name>$data_theme</name>
+          <default>DEFAULT_THEME</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="56" code="50018">No DocBlock was found for property $_data_role</error>
+      <error line="57" code="50018">No DocBlock was found for property $_data_theme</error>
+      <error line="58" code="50018">No DocBlock was found for property $_data_icon</error>
+      <error line="59" code="50018">No DocBlock was found for property $_data_direction</error>
+      <error line="60" code="50018">No DocBlock was found for property $_data_transition</error>
+      <error line="61" code="50018">No DocBlock was found for property $_data_inset</error>
+      <error line="63" code="50014">Name of argument $data_role does not match with the DocBlock's name $element_name in __construct()</error>
+      <error line="63" code="50015">Argument $element_name is missing from the Docblock of __construct()</error>
+      <error line="73" code="50014">Name of argument $data_role does not match with the DocBlock's name $dataRole in setDataRole()</error>
+      <notice line="73" code="50013">Parameter $dataRole could not be found in setDataRole()</notice>
+      <error line="181" code="50014">Name of argument $data_inset does not match with the DocBlock's name $dataInset in setDataInset()</error>
+      <notice line="181" code="50013">Parameter $dataInset could not be found in setDataInset()</notice>
+      <error line="249" code="50014">Name of argument $data_theme does not match with the DocBlock's name $data_role in chain_data_theme()</error>
+      <notice line="249" code="50013">Parameter $data_role could not be found in chain_data_theme()</notice>
+    </parse_markers>
+  </file>
+  <file path="classes/scriptelement.class.php" hash="46f2e58541e173b22ec607cd60e70a43" package="Default">
+    <docblock line="2">
+      <description>Handles Script elements</description>
+      <long-description/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="11" package="Default">
+      <extends>\no\malmanger\mjqm\Element</extends>
+      <name>ScriptElement</name>
+      <full_name>\no\malmanger\mjqm\ScriptElement</full_name>
+      <docblock line="7">
+        <description>HeadMeta simple class to handle script elements for the header.</description>
+        <long-description/>
+      </docblock>
+      <constant namespace="no\malmanger\mjqm" line="15" package="Default">
+        <name>ELEMENT_NAME</name>
+        <full_name>ELEMENT_NAME</full_name>
+        <value>'script'</value>
+        <docblock line="12">
+          <description>ELEMENT_NAME</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="no\malmanger\mjqm" line="19" package="Default">
+        <name>DEFAULT_TYPE</name>
+        <full_name>DEFAULT_TYPE</full_name>
+        <value>'text/javascript'</value>
+        <docblock line="16">
+          <description>DEFAULT_TYPE</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="26" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_src</name>
+        <default>""</default>
+        <docblock line="23">
+          <description>$src is the src attribute of the script element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="30" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_type</name>
+        <default>""</default>
+        <docblock line="27">
+          <description>$type is the type attribute of the script element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="34" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_async</name>
+        <default>""</default>
+        <docblock line="31">
+          <description>$_async is the async attribute of the script element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="38" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_charset</name>
+        <default>""</default>
+        <docblock line="35">
+          <description>$_charset is the charset attribute of the script element</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="46" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="40">
+          <description>Constructor for creating a new Headscript object</description>
+          <long-description/>
+          <tag line="40" name="param" description="= &quot;&quot; The src of the script element" type="string" variable="$src">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="40" name="param" description="= &quot;text/javascript&quot; The type of the scriptelement" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="46">
+          <name>$src</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="46">
+          <name>$type</name>
+          <default>self::DEFAULT_TYPE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="63" package="Default">
+        <name>setType</name>
+        <full_name>setType</full_name>
+        <docblock line="58">
+          <description>Set the script type</description>
+          <long-description/>
+          <tag line="58" name="param" description="The type of the scriptelement" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="63">
+          <name>$type</name>
+          <default>self::DEFAULT_TYPE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="75" package="Default">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="70">
+          <description>Get the type of the script element</description>
+          <long-description/>
+          <tag line="70" name="return" description="$type Returns the script type." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="83" package="Default">
+        <name>setSrc</name>
+        <full_name>setSrc</full_name>
+        <docblock line="78">
+          <description>Set the script src</description>
+          <long-description/>
+          <tag line="78" name="param" description="The src of the scriptelement" type="string" variable="$src">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="83">
+          <name>$src</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="95" package="Default">
+        <name>getSrc</name>
+        <full_name>getSrc</full_name>
+        <docblock line="90">
+          <description>Get the src of the script element</description>
+          <long-description/>
+          <tag line="90" name="return" description="$src Returns the script src." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="103" package="Default">
+        <name>setAsync</name>
+        <full_name>setAsync</full_name>
+        <docblock line="98">
+          <description>Set the script async</description>
+          <long-description/>
+          <tag line="98" name="param" description="The async of the scriptelement" type="string" variable="$async">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="103">
+          <name>$async</name>
+          <default>true</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="115" package="Default">
+        <name>getAsync</name>
+        <full_name>getAsync</full_name>
+        <docblock line="110">
+          <description>Get the async of the script element</description>
+          <long-description/>
+          <tag line="110" name="return" description="$async Returns the script async." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="123" package="Default">
+        <name>setCharset</name>
+        <full_name>setCharset</full_name>
+        <docblock line="118">
+          <description>Set the script charset</description>
+          <long-description/>
+          <tag line="118" name="param" description="The charset of the scriptelement" type="string" variable="$charset">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="123">
+          <name>$charset</name>
+          <default>"UTF-8"</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="135" package="Default">
+        <name>getCharset</name>
+        <full_name>getCharset</full_name>
+        <docblock line="130">
+          <description>Get the charset of the script element</description>
+          <long-description/>
+          <tag line="130" name="return" description="$charset Returns the script charset." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="144" package="Default">
+        <name>attributes</name>
+        <full_name>attributes</full_name>
+        <docblock line="140">
+          <description>Get a string of attribute=value pairs</description>
+          <long-description/>
+          <tag line="140" name="return" description="$attributes String containing the attributes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="classes/ichainable.interface.php" hash="6c678048ead676ba688ffe9f24bc0796" package="Default">
+    <docblock line="2">
+      <description>IChainable interface</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <interface namespace="no\malmanger\mjqm" line="12" package="Default">
+      <name>IChainable</name>
+      <full_name>\no\malmanger\mjqm\IChainable</full_name>
+      <docblock line="8">
+        <description>The interface for all objects that should support to be chainable.</description>
+        <long-description>&lt;p&gt;All?&lt;/p&gt;</long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="19" package="Default">
+        <name>__call</name>
+        <full_name>__call</full_name>
+        <docblock line="13">
+          <description>Used to overload function calls</description>
+          <long-description/>
+          <tag line="13" name="param" description="Name of function that is called" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="13" name="param" description="Array of arguments passed to the function" type="array" variable="$arguments">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="13" name="return" description="$this Object that the function resides in." type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+        <argument line="19">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="19">
+          <name>$arguments</name>
+          <default/>
+          <type>array</type>
+        </argument>
+      </method>
+    </interface>
+  </file>
+  <file path="classes/ielement.interface.php" hash="24344ed7a6b21413a1fe495729492527" package="Default">
+    <docblock line="2">
+      <description>IElement interface</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <interface namespace="no\malmanger\mjqm" line="12" package="Default">
+      <name>IElement</name>
+      <full_name>\no\malmanger\mjqm\IElement</full_name>
+      <docblock line="8">
+        <description>The interface for all objects that should handle html elements</description>
+        <long-description/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="17" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="13">
+          <description>Default constructor for new elements</description>
+          <long-description/>
+          <tag line="13" name="param" description="Name of new element i.e. 'link' or 'div'" type="string" variable="$element_name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="17">
+          <name>$element_name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="23" package="Default">
+        <name>__set</name>
+        <full_name>__set</full_name>
+        <docblock line="18">
+          <description>Used to overload set Property</description>
+          <long-description/>
+          <tag line="18" name="param" description="Name of property to set." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="18" name="param" description="The value to give the property" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="23">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="23">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="29" package="Default">
+        <name>__get</name>
+        <full_name>__get</full_name>
+        <docblock line="24">
+          <description>Used to overload get Property</description>
+          <long-description/>
+          <tag line="24" name="param" description="Name of property to set." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="24" name="return" description="$value for the spesified property $name." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="29">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="35" package="Default">
+        <name>__isset</name>
+        <full_name>__isset</full_name>
+        <docblock line="30">
+          <description>Used to overload isset for selected Property</description>
+          <long-description/>
+          <tag line="30" name="param" description="Name of property to check for." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="30" name="return" description="$isset true if propertyfor the spesified property $name." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="35">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="40" package="Default">
+        <name>__unset</name>
+        <full_name>__unset</full_name>
+        <docblock line="36">
+          <description>Unset the selected Property</description>
+          <long-description/>
+          <tag line="36" name="param" description="Name of property to set." type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="40">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="45" package="Default">
+        <name>addClass</name>
+        <full_name>addClass</full_name>
+        <docblock line="41">
+          <description>add class to element</description>
+          <long-description/>
+          <tag line="41" name="param" description="class('s) to add. Use space ' ' separated list of classnames" type="string" variable="$classnames">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="45">
+          <name>$classnames</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="50" package="Default">
+        <name>deleteClass</name>
+        <full_name>deleteClass</full_name>
+        <docblock line="46">
+          <description>remove class from element</description>
+          <long-description/>
+          <tag line="46" name="param" description="class('s) to remove. Use space ' ' separated list of classnames" type="string" variable="$classnames">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="50">
+          <name>$classnames</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="54" package="Default">
+        <name>unsetClass</name>
+        <full_name>unsetClass</full_name>
+        <docblock line="51">
+          <description>clear list of classes for element</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="60" package="Default">
+        <name>getClass</name>
+        <full_name>getClass</full_name>
+        <docblock line="55">
+          <description>get classes for element</description>
+          <long-description/>
+          <tag line="55" name="param" description="If classes should be returned as an array instead og a space separated string." type="boolean" variable="$return_array">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="55" name="return" description="$classnames class('s) to add. Use space ' ' separated list of classnames" type="string|array">
+            <type by_reference="false">string</type>
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="60">
+          <name>$return_array</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="65" package="Default">
+        <name>setId</name>
+        <full_name>setId</full_name>
+        <docblock line="61">
+          <description>Set the ID attribute of the element</description>
+          <long-description/>
+          <tag line="61" name="param" description="the ID to set" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="65">
+          <name>$id</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="70" package="Default">
+        <name>unsetId</name>
+        <full_name>unsetId</full_name>
+        <docblock line="66">
+          <description>Remove the ID from the element</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="75" package="Default">
+        <name>element</name>
+        <full_name>element</full_name>
+        <docblock line="71">
+          <description>Get the complete element tag.</description>
+          <long-description/>
+          <tag line="71" name="param" description="= false Set to true to close with a ' /&gt;'" type="boolean" variable="$closed">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="75">
+          <name>$closed</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="81" package="Default">
+        <name>attributes</name>
+        <full_name>attributes</full_name>
+        <docblock line="76">
+          <description>Get a string of attribute=value pairs
+If overloaded in subclasses you should do a '$attributes .= parent::attributes();' at the end</description>
+          <long-description/>
+          <tag line="76" name="return" description="$attributes String containing the attributes." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+  </file>
+  <file path="classes/multipage.class.php" hash="2220e23ffb054192d7865eb474047948" package="Default">
+    <docblock line="2">
+      <description>File for Multipage class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="12" package="Default">
+      <extends>\no\malmanger\mjqm\BaseModel</extends>
+      <name>Multipage</name>
+      <full_name>\no\malmanger\mjqm\Multipage</full_name>
+      <docblock line="8">
+        <description>Use this class to create a JQuery Mobile document with multiple pages</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="17" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_head</name>
+        <default/>
+        <docblock line="14">
+          <description/>
+          <long-description/>
+          <tag line="14" name="ignore" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="21" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_header</name>
+        <default/>
+        <docblock line="18">
+          <description/>
+          <long-description/>
+          <tag line="18" name="ignore" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="25" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_footer</name>
+        <default/>
+        <docblock line="22">
+          <description/>
+          <long-description/>
+          <tag line="22" name="ignore" description=""/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="29" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_pages</name>
+        <default/>
+        <docblock line="26">
+          <description/>
+          <long-description/>
+          <tag line="26" name="ignore" description=""/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="34" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="31">
+          <description/>
+          <long-description/>
+          <tag line="31" name="ignore" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="49" package="Default">
+        <name>newPage</name>
+        <full_name>newPage</full_name>
+        <docblock line="42">
+          <description>create new page</description>
+          <long-description/>
+          <tag line="42" name="param" description="= '' set the id attribute of the page element" type="string" variable="$id">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="42" name="param" description="= 'a' sets which theme-roller theme to use" type="string" variable="$data_theme">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="42" name="return" description="$new_page" type="\no\malmanger\mjqm\Page">
+            <type by_reference="false">\no\malmanger\mjqm\Page</type>
+          </tag>
+        </docblock>
+        <argument line="49">
+          <name>$name</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="49">
+          <name>$data_theme</name>
+          <default>'a'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="60" package="Default">
+        <name>head</name>
+        <full_name>head</full_name>
+        <docblock line="55">
+          <description>returns the head object of the page</description>
+          <long-description/>
+          <tag line="55" name="return" description="$_head" type="object">
+            <type by_reference="false">object</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="68" package="Default">
+        <name>pages</name>
+        <full_name>pages</full_name>
+        <docblock line="63">
+          <description>returns the array of page objects</description>
+          <long-description/>
+          <tag line="63" name="return" description="$_pages" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="42" code="50014">Name of argument $name does not match with the DocBlock's name $id in newPage()</error>
+      <notice line="42" code="50013">Parameter $id could not be found in newPage()</notice>
+    </parse_markers>
+  </file>
+  <file path="classes/head.class.php" hash="5ef36da4ea37771e0146234e17653013" package="Default">
+    <docblock line="2">
+      <description>File for Head class</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="no\malmanger\mjqm" line="12" package="Default">
+      <extends>\no\malmanger\mjqm\BaseModel</extends>
+      <name>Head</name>
+      <full_name>\no\malmanger\mjqm\Head</full_name>
+      <docblock line="8">
+        <description>Head class is the model representation for the Document head section</description>
+        <long-description/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="16" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_doctype</name>
+        <default>"html"</default>
+        <docblock line="13">
+          <description>$_doctype HTML document type, default = html</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="20" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_manifest</name>
+        <default>""</default>
+        <docblock line="17">
+          <description>$_manifest = "" manifest for html content, default = ""</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="24" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_headerAttr</name>
+        <default>""</default>
+        <docblock line="21">
+          <description>$_headerAttr Attributes for document</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="28" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_charset</name>
+        <default>CHARSET</default>
+        <docblock line="25">
+          <description>$_charset for document</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="32" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_title</name>
+        <default>""</default>
+        <docblock line="29">
+          <description>$_title Document title</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="36" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_meta</name>
+        <default>array()</default>
+        <docblock line="33">
+          <description>$_meta contain meta tags for the document</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="40" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_link</name>
+        <default>array()</default>
+        <docblock line="37">
+          <description>$_link contain link tags for the document</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="44" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_stylesheet</name>
+        <default>array()</default>
+        <docblock line="41">
+          <description>$_stylesheet contain link tags of type=stylesheet for the document</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="48" namespace="no\malmanger\mjqm" package="Default">
+        <name>$_script</name>
+        <default>array()</default>
+        <docblock line="45">
+          <description>$_script contain script tags for the document</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="63" package="Default">
+        <name>setDocType</name>
+        <full_name>setDocType</full_name>
+        <docblock line="59">
+          <description>set which &lt;!DOCTYPE to use</description>
+          <long-description/>
+          <tag line="59" name="param" description="set to false to capture output buffer to string instead. Default = true" type="string" variable="$doctype">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="63">
+          <name>$doctype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="70" package="Default">
+        <name>getDocType</name>
+        <full_name>getDocType</full_name>
+        <docblock line="66">
+          <description>get the current &lt;!DOCTYPE</description>
+          <long-description/>
+          <tag line="66" name="return" description="the doctype" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="77" package="Default">
+        <name>setManifest</name>
+        <full_name>setManifest</full_name>
+        <docblock line="73">
+          <description>set wether or not to use a manifest file</description>
+          <long-description/>
+          <tag line="73" name="param" description="set to false to capture output buffer to string instead. Default = true" type="string" variable="$manifest">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="77">
+          <name>$manifest</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="85" package="Default">
+        <name>getManifest</name>
+        <full_name>getManifest</full_name>
+        <docblock line="81">
+          <description>get the current manifest</description>
+          <long-description/>
+          <tag line="81" name="return" description="the manifest file" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="94" package="Default">
+        <name>setHeaderAttr</name>
+        <full_name>setHeaderAttr</full_name>
+        <docblock line="90">
+          <description>set header attributes to use</description>
+          <long-description/>
+          <tag line="90" name="param" description="" type="string" variable="$attr">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="94">
+          <name>$attr</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="101" package="Default">
+        <name>getHeaderAttr</name>
+        <full_name>getHeaderAttr</full_name>
+        <docblock line="97">
+          <description>get the set Header Attributes</description>
+          <long-description/>
+          <tag line="97" name="return" description="attributes" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="108" package="Default">
+        <name>setCharset</name>
+        <full_name>setCharset</full_name>
+        <docblock line="104">
+          <description>set charset</description>
+          <long-description/>
+          <tag line="104" name="param" description="= CHARSET" type="string" variable="$charset">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="108">
+          <name>$charset</name>
+          <default>CHARSET</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="115" package="Default">
+        <name>getCharset</name>
+        <full_name>getCharset</full_name>
+        <docblock line="111">
+          <description>get charset</description>
+          <long-description/>
+          <tag line="111" name="return" description="$charset" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="122" package="Default">
+        <name>setTitle</name>
+        <full_name>setTitle</full_name>
+        <docblock line="118">
+          <description>set document title</description>
+          <long-description/>
+          <tag line="118" name="param" description="= &quot;&quot;" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="122">
+          <name>$title</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="130" package="Default">
+        <name>getTitle</name>
+        <full_name>getTitle</full_name>
+        <docblock line="126">
+          <description>get the set document title</description>
+          <long-description/>
+          <tag line="126" name="return" description="document title" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="138" package="Default">
+        <name>addMeta</name>
+        <full_name>addMeta</full_name>
+        <docblock line="133">
+          <description>add meta tag for header</description>
+          <long-description/>
+          <tag line="133" name="param" description="The meta name to set" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="133" name="param" description="= &quot;&quot; the content string for meta" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="138">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="138">
+          <name>$content</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="146" package="Default">
+        <name>getMeta</name>
+        <full_name>getMeta</full_name>
+        <docblock line="141">
+          <description>get the selected HeadMeta object</description>
+          <long-description/>
+          <tag line="141" name="param" description="@name the meta tag name to get information for" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="141" name="return" description="document title" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="146">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="153" package="Default">
+        <name>getMetaArray</name>
+        <full_name>getMetaArray</full_name>
+        <docblock line="149">
+          <description>get array of HeadMeta objects</description>
+          <long-description/>
+          <tag line="149" name="return" description="$meta List of meta tags" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="164" package="Default">
+        <name>addLink</name>
+        <full_name>addLink</full_name>
+        <docblock line="157">
+          <description>add link tag for header</description>
+          <long-description/>
+          <tag line="157" name="param" description="The link relation to set" type="string" variable="$rel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="157" name="param" description="= &quot;&quot; the content string for link" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="157" name="param" description="= &quot;&quot; Mime type of linked dokument" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="157" name="param" description="= HeadLink::DEFAULT_SIZES The sizes of any rel type that contains *icon*" type="string" variable="$sizes">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="164">
+          <name>$rel</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="164">
+          <name>$href</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="164">
+          <name>$type</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="164">
+          <name>$sizes</name>
+          <default>\no\malmanger\mjqm\HeadLink::DEFAULT_SIZES</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="172" package="Default">
+        <name>getLink</name>
+        <full_name>getLink</full_name>
+        <docblock line="167">
+          <description>get the selected HeadLink object</description>
+          <long-description/>
+          <tag line="167" name="param" description="@name the link tag name to get information for" type="string" variable="$rel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="167" name="return" description="document title" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="172">
+          <name>$rel</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="179" package="Default">
+        <name>getLinkArray</name>
+        <full_name>getLinkArray</full_name>
+        <docblock line="175">
+          <description>get array of HeadLink objects</description>
+          <long-description/>
+          <tag line="175" name="return" description="$link List of link tags" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="189" package="Default">
+        <name>addStylesheet</name>
+        <full_name>addStylesheet</full_name>
+        <docblock line="183">
+          <description>add stylesheet tag for header</description>
+          <long-description/>
+          <tag line="183" name="param" description="= &quot;&quot; the content string for stylesheet" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="183" name="param" description="= &quot;&quot; Mime type of stylesheeted dokument" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="183" name="param" description="= HeadLink::DEFAULT_SIZES The sizes of any rel type that contains *icon*" type="string" variable="$sizes">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="189">
+          <name>$href</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="189">
+          <name>$type</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="189">
+          <name>$sizes</name>
+          <default>\no\malmanger\mjqm\HeadLink::DEFAULT_SIZES</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="197" package="Default">
+        <name>getStylesheet</name>
+        <full_name>getStylesheet</full_name>
+        <docblock line="192">
+          <description>get the selected HeadLink object</description>
+          <long-description/>
+          <tag line="192" name="param" description="@name the stylesheet tag name to get information for" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="192" name="return" description="document title" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="197">
+          <name>$href</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="204" package="Default">
+        <name>getStylesheetArray</name>
+        <full_name>getStylesheetArray</full_name>
+        <docblock line="200">
+          <description>get array of HeadLink objects</description>
+          <long-description/>
+          <tag line="200" name="return" description="$stylesheet List of stylesheet tags" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="213" package="Default">
+        <name>addScript</name>
+        <full_name>addScript</full_name>
+        <docblock line="208">
+          <description>add script tag for header</description>
+          <long-description/>
+          <tag line="208" name="param" description="= &quot;&quot; the content string for script" type="string" variable="$src">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="208" name="param" description="= ScriptElement::DEFAULT_TYPE The sizes of any rel type that contains *icon*" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="213">
+          <name>$src</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="213">
+          <name>$type</name>
+          <default>\no\malmanger\mjqm\ScriptElement::DEFAULT_TYPE</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="221" package="Default">
+        <name>getScript</name>
+        <full_name>getScript</full_name>
+        <docblock line="216">
+          <description>get the selected HeadScript object</description>
+          <long-description/>
+          <tag line="216" name="param" description="@name the script tag name to get information for" type="string" variable="$rel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="216" name="return" description="document title" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="221">
+          <name>$rel</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="228" package="Default">
+        <name>getScriptArray</name>
+        <full_name>getScriptArray</full_name>
+        <docblock line="224">
+          <description>get array of HeadScript objects</description>
+          <long-description/>
+          <tag line="224" name="return" description="$script List of script tags" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="239" package="Default">
+        <name>chain_manifest</name>
+        <full_name>chain_manifest</full_name>
+        <docblock line="235">
+          <description>chainable version of setting manifest file</description>
+          <long-description/>
+          <tag line="235" name="param" description="" type="string" variable="$manifest">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="239">
+          <name>$manifest</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="247" package="Default">
+        <name>chain_title</name>
+        <full_name>chain_title</full_name>
+        <docblock line="243">
+          <description>chainable version of setting title</description>
+          <long-description/>
+          <tag line="243" name="param" description="" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="247">
+          <name>$title</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="255" package="Default">
+        <name>chain_docType</name>
+        <full_name>chain_docType</full_name>
+        <docblock line="251">
+          <description>chainable version of setting document type</description>
+          <long-description/>
+          <tag line="251" name="param" description="" type="string" variable="$doctype">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="255">
+          <name>$doctype</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="263" package="Default">
+        <name>chain_viewport</name>
+        <full_name>chain_viewport</full_name>
+        <docblock line="259">
+          <description>chainable version of setting viewport</description>
+          <long-description/>
+          <tag line="259" name="param" description="string $content Set the content string for the meta tag" type="\no\malmanger\mjqm\optional" variable="$content">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="263">
+          <name>$content</name>
+          <default>"user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="271" package="Default">
+        <name>chain_meta</name>
+        <full_name>chain_meta</full_name>
+        <docblock line="266">
+          <description>chainable version of addMeta</description>
+          <long-description/>
+          <tag line="266" name="param" description="The name attribute of the meta tag" type="\no\malmanger\mjqm\" variable="$name"/>
+          <tag line="266" name="param" description="string $content = &quot;&quot; Set the content string for the viewport" type="\no\malmanger\mjqm\optional" variable="$content">
+            <type by_reference="false">\no\malmanger\mjqm\optional</type>
+          </tag>
+        </docblock>
+        <argument line="271">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="271">
+          <name>$content</name>
+          <default>""</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="281" package="Default">
+        <name>chain_link</name>
+        <full_name>chain_link</full_name>
+        <docblock line="274">
+          <description>chainable version of addLink</description>
+          <long-description/>
+          <tag line="274" name="param" description="The link relation to set" type="string" variable="$rel">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="274" name="param" description="= &quot;&quot; the content string for link" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="274" name="param" description="= &quot;&quot; Mime type of linked dokument" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="274" name="param" description="= HeadLink::DEFAULT_SIZES The sizes of any rel type that contains *icon*" type="string" variable="$sizes">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="281">
+          <name>$rel</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="281">
+          <name>$href</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="281">
+          <name>$type</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="281">
+          <name>$sizes</name>
+          <default>\no\malmanger\mjqm\HeadLink::DEFAULT_SIZES</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="290" package="Default">
+        <name>chain_stylesheet</name>
+        <full_name>chain_stylesheet</full_name>
+        <docblock line="284">
+          <description>chainable version of addStylesheet</description>
+          <long-description/>
+          <tag line="284" name="param" description="= &quot;&quot; the content string for stylesheet" type="string" variable="$href">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="284" name="param" description="= &quot;&quot; Mime type of stylesheeted dokument" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="284" name="param" description="= HeadLink::DEFAULT_SIZES The sizes of any rel type that contains *icon*" type="string" variable="$sizes">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="290">
+          <name>$href</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="290">
+          <name>$type</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="290">
+          <name>$sizes</name>
+          <default>\no\malmanger\mjqm\HeadLink::DEFAULT_SIZES</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="no\malmanger\mjqm" line="298" package="Default">
+        <name>chain_script</name>
+        <full_name>chain_script</full_name>
+        <docblock line="293">
+          <description>chainable version of addScript</description>
+          <long-description/>
+          <tag line="293" name="param" description="= &quot;&quot; the content string for script" type="string" variable="$src">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="293" name="param" description="= ScriptElement::DEFAULT_TYPE The sizes of any rel type that contains *icon*" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="298">
+          <name>$src</name>
+          <default>""</default>
+          <type/>
+        </argument>
+        <argument line="298">
+          <name>$type</name>
+          <default>\no\malmanger\mjqm\ScriptElement::DEFAULT_TYPE</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="test.php" hash="163101d2f677b173aeefeb46eed06cca" package="Default">
+    <docblock line="2">
+      <description>Just for testing</description>
+      <long-description/>
+      <tag line="2" name="author" description="Mr. Dummy &lt;mr@dummy.xx&gt;"/>
+    </docblock>
+  </file>
+  <file path="config.php" hash="cfbd64517cf6faeda5e96d965fdaf4a4" package="Default">
+    <docblock line="2">
+      <description>MJQM - Menu JQuery Mobile for php
+Library initially built to support MPH (My Precious Home)</description>
+      <long-description>&lt;p&gt;Primary include file for this library&lt;/p&gt;</long-description>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;&#10;namespace no\malmanger\mjqm"/>
+    </docblock>
+    <include line="16" type="Require Once" package="Default">
+      <name>helper.php</name>
+    </include>
+    <include line="61" type="Require Once" package="Default">
+      <name/>
+    </include>
+    <constant namespace="global" line="18" package="Default">
+      <name>MJQM_DIR</name>
+      <full_name>\MJQM_DIR</full_name>
+      <value>dirname(__FILE__)</value>
+    </constant>
+    <constant namespace="global" line="19" package="Default">
+      <name>MJQM_LOGLEVEL</name>
+      <full_name>\MJQM_LOGLEVEL</full_name>
+      <value>MJQM_DEBUG</value>
+    </constant>
+    <constant namespace="global" line="20" package="Default">
+      <name>CHARSET</name>
+      <full_name>\CHARSET</full_name>
+      <value>"UTF-8"</value>
+    </constant>
+    <function namespace="no\malmanger\mjqm" line="35" package="Default">
+      <name>__autoload_mjqm</name>
+      <full_name>\no\malmanger\mjqm\__autoload_mjqm</full_name>
+      <docblock line="30">
+        <description>Class and Interface autoloader</description>
+        <long-description/>
+        <tag line="30" name="param" description="Name of the class to load" type="string" variable="$className">
+          <type by_reference="false">string</type>
+        </tag>
+      </docblock>
+      <argument line="35">
+        <name>$className</name>
+        <default/>
+        <type/>
+      </argument>
+    </function>
+  </file>
+  <file path="views/form.view.php" hash="c1536086dac2e537dfd14316a111b1f0" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/form.view.php</error>
+    </parse_markers>
+  </file>
+  <file path="views/head.view.php" hash="ab5a4cae2cd187ccd23d972965cf9dac" package="Default">
+    <docblock line="2">
+      <description>Viewer template for head model</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+    <markers>
+      <todo line="13">Handle HTTP header information here</todo>
+      <todo line="23">Print meta tags</todo>
+      <todo line="29">Print link tags</todo>
+      <todo line="33">Print link tags</todo>
+      <todo line="42">Print link tags</todo>
+    </markers>
+  </file>
+  <file path="views/multipage.view.php" hash="df392a381f56bfe2b7296abe27e0a2df" package="Default">
+    <docblock line="2">
+      <description>Viewer template for multipage model</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+  </file>
+  <file path="views/page.view.php" hash="5b6892fee95c33cbb2be5f425ccd63e6" package="Default">
+    <docblock line="2">
+      <description>Viewer template for page model</description>
+      <long-description/>
+      <tag line="2" name="author" description="Bjørne Malmanger &lt;bjorne _a_t_ malmanger _d_o_t_ no&gt;"/>
+    </docblock>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <namespace name="no" full_name="no">
+    <namespace name="malmanger" full_name="no\malmanger">
+      <namespace name="mjqm" full_name="no\malmanger\mjqm"/>
+    </namespace>
+  </namespace>
+  <marker count="6">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
